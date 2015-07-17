@@ -1,0 +1,3 @@
+phenom_wafeee:
+    resource: "@PhenomWafeeeBundle/Controller/"
+    type:     annotation
