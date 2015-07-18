@@ -8,11 +8,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/{name}", name="index")
+     * @Route("/", name="index")
      *
      */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('PhenomWafeeeBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('PhenomWafeeeBundle:Default:index.html.twig');
     }
 }
