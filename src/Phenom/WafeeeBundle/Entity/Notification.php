@@ -52,4 +52,73 @@ class Notification
     {
         return $this->id;
     }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Notification
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * Set user_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\User $userId
+     * @return Notification
+     */
+    public function setUserId(\Phenom\WafeeeBundle\Entity\User $userId = null)
+    {
+        $this->user_id = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Get user_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\User 
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * Set shop_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Shop $shopId
+     * @return Notification
+     */
+    public function setShopId(\Phenom\WafeeeBundle\Entity\Shop $shopId = null)
+    {
+        $this->shop_id = $shopId;
+
+        return $this;
+    }
+
+    /**
+     * Get shop_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Shop 
+     */
+    public function getShopId()
+    {
+        return $this->shop_id;
+    }
 }

@@ -49,7 +49,7 @@ class Shop
 
     /**
      * @ManyToOne(targetEntity="User")
-     * @JoinColumn(name="user_id", referencedColumnName="id")
+     * @JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $user_id;
 
@@ -62,5 +62,74 @@ class Shop
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Shop
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Shop
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set user_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\User $userId
+     * @return Shop
+     */
+    public function setUserId(\Phenom\WafeeeBundle\Entity\User $userId = null)
+    {
+        $this->user_id = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Get user_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\User 
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
     }
 }
