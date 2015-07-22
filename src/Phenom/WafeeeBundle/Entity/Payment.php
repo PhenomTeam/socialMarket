@@ -62,4 +62,96 @@ class Payment
     {
         return $this->id;
     }
+
+    /**
+     * Set paymentAmount
+     *
+     * @param float $paymentAmount
+     * @return Payment
+     */
+    public function setPaymentAmount($paymentAmount)
+    {
+        $this->paymentAmount = $paymentAmount;
+
+        return $this;
+    }
+
+    /**
+     * Get paymentAmount
+     *
+     * @return float 
+     */
+    public function getPaymentAmount()
+    {
+        return $this->paymentAmount;
+    }
+
+    /**
+     * Set paymentDate
+     *
+     * @param \DateTime $paymentDate
+     * @return Payment
+     */
+    public function setPaymentDate($paymentDate)
+    {
+        $this->paymentDate = $paymentDate;
+
+        return $this;
+    }
+
+    /**
+     * Get paymentDate
+     *
+     * @return \DateTime 
+     */
+    public function getPaymentDate()
+    {
+        return $this->paymentDate;
+    }
+
+    /**
+     * Set paymentType
+     *
+     * @param string $paymentType
+     * @return Payment
+     */
+    public function setPaymentType($paymentType)
+    {
+        $this->paymentType = $paymentType;
+
+        return $this;
+    }
+
+    /**
+     * Get paymentType
+     *
+     * @return string 
+     */
+    public function getPaymentType()
+    {
+        return $this->paymentType;
+    }
+
+    /**
+     * Set order_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Orders $orderId
+     * @return Payment
+     */
+    public function setOrderId(\Phenom\WafeeeBundle\Entity\Orders $orderId = null)
+    {
+        $this->order_id = $orderId;
+
+        return $this;
+    }
+
+    /**
+     * Get order_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Orders 
+     */
+    public function getOrderId()
+    {
+        return $this->order_id;
+    }
 }

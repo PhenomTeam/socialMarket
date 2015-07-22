@@ -1,0 +1,34 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<h1>Register User</h1>
+{{ form_start(form, {'action': path('account_create'), 'method': 'POST'}) }}
+
+    {{ form_errors(form) }}
+
+    <div>
+        {#{{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder':'UserName'}}) }}<br>#}
+        {#{{ form_errors(form.username) }}<br>#}
+        {{ form_row(form.username) }}
+    </div>
+
+    <div>
+        {#{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder':'Email'}}) }}<br>#}
+        {#{{ form_errors(form.email) }}<br>#}
+        {{ form_row(form.email) }}
+    </div>
+
+    <div>
+        {{ form_row(form.password.first) }}
+        {{ form_row(form.password.second) }}
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="remember-me">Remember Me
+        </label>
+    </div>
+    <br>
+    {{ form_widget(form.save, {'label': 'Register Button'}) }}
+{{ form_end(form) }}
+{% endblock %}

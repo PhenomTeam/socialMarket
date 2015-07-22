@@ -73,4 +73,106 @@ class Category
     {
         return $this->id;
     }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Category
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Category
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set shop_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Shop $shopId
+     * @return Category
+     */
+    public function setShopId(\Phenom\WafeeeBundle\Entity\Shop $shopId = null)
+    {
+        $this->shop_id = $shopId;
+
+        return $this;
+    }
+
+    /**
+     * Get shop_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Shop 
+     */
+    public function getShopId()
+    {
+        return $this->shop_id;
+    }
+
+    /**
+     * Add products
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Product $products
+     * @return Category
+     */
+    public function addProduct(\Phenom\WafeeeBundle\Entity\Product $products)
+    {
+        $this->products[] = $products;
+
+        return $this;
+    }
+
+    /**
+     * Remove products
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Product $products
+     */
+    public function removeProduct(\Phenom\WafeeeBundle\Entity\Product $products)
+    {
+        $this->products->removeElement($products);
+    }
+
+    /**
+     * Get products
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
 }
