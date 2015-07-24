@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Phenom\WafeeeBundle\Entity\User;
+use Symfony\Component\HttpFoundation\Response;
 
 class AccountController extends Controller
 {
@@ -64,6 +65,51 @@ class AccountController extends Controller
             '@PhenomWafeee/User/register.html.twig',
             array('form' => $form->createView())
         );
+    }
+
+    /**
+     *
+     * @Route("/login", name="login_route")
+     *
+     */
+    public function loginAction(Request $request)
+    {
+        $authenticationUtils = $this->get('security.authentication_utils');
+
+        // Get error if any
+        $error = $authenticationUtils->getLastAuthenticationError();
+
+        // Last username entered by user
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        return $this->render(
+            '@PhenomWafeee/Authenticate/login.html.twig',
+            array(
+                'last_username' => $lastUsername,
+                'error' => $error,
+            )
+        );
+    }
+
+    /**
+     *
+     * @Route("/login_check", name="login_check")
+     *
+     */
+    public function loginCheckAction()
+    {
+        // Handle by security systems
+    }
+
+
+    /**
+     *
+     * @Route("/admin", name="admin_page")
+     *
+     */
+    public function adminPageAction()
+    {
+        return Response("Admin page");
     }
 
 }

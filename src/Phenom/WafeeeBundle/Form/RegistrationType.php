@@ -20,7 +20,7 @@ class RegistrationType extends AbstractType
                 'required' => true,
                 'first_options'  => array('attr' => array('placeholder' => 'Password'), 'label' => false),
                 'second_options' => array('attr' => array('placeholder' => 'Confirm Password'), 'label' => false)))
-            ->add('save', 'submit', ['label'=>'Register'])
+            ->add('submit', 'submit', ['label'=>'Register'])
             ;
     }
 

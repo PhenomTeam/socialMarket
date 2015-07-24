@@ -11,9 +11,13 @@ security:
             cost: 13
 
     firewalls:
-        default:
+        secured_area:
             anonymous: ~
             http_basic: ~
+            form_login:
+                login_path: /login
+                check_path: /login_check
+
     access_control:
         # require ROLE_ADMIN for /admin*
         - { path: ^/admin, roles: ROLE_ADMIN }

@@ -14,8 +14,7 @@
 
     <div>
         {#{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder':'Email'}}) }}<br>#}
-        {#{{ form_errors(form.email) }}<br>#}
-        {{ form_row(form.email) }}
+        {{ =form_row(form.email) }}
     </div>
 
     <div>
@@ -29,6 +28,6 @@
         </label>
     </div>
     <br>
-    {{ form_widget(form.save, {'label': 'Register Button'}) }}
+    {{ form_widget(form.submit, {'label': 'Sign Up'}) }}
 {{ form_end(form) }}
 {% endblock %}

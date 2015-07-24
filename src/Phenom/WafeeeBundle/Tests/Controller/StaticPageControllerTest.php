@@ -18,5 +18,9 @@ class StaticPageControllerTest extends WebTestCase {
         $crawler = $client->request('GET', '/');
 
         $this->assertTrue($crawler->filter('html:contains("Homepage")')->count() > 0);
+
+        $this->assertTrue($client->getResponse()->isSuccessful());
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 }
