@@ -12,12 +12,25 @@ security:
 
     firewalls:
         secured_area:
-            anonymous: ~
-            http_basic: ~
+            pattern: ^/.*
+#            http_basic: ~
             form_login:
+                provider: our_db_provider
                 login_path: /login
                 check_path: /login_check
+                csrf_provider: security.csrf.token_manager
+                intention: authenticate
+            logout:
+                path: /logout
+                target: /
+            anonymous: true
+            security: true
+            remember_me:
+                key: "%secret%"
+                lifetime: 604800
+                path: /
 
     access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         # require ROLE_ADMIN for /admin*
         - { path: ^/admin, roles: ROLE_ADMIN }

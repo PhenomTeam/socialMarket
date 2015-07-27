@@ -31,7 +31,10 @@ class RegistrationType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'Phenom\WafeeeBundle\Entity\User',
-            'attr' => array('novalidate'=>'novalidate')
+            'attr' => array('novalidate'=>'novalidate'),
+            'csrf_protection' => true,
+            'csrf_field_name' => '_csrf_token',
+            'intention' => 'authenticate',
         ));
     }
 

@@ -29,7 +29,7 @@ class AccountController extends Controller
 
     /**
      *
-     * @Route("/register", name="account_create")
+     * @Route("/register", name="create_user")
      * @Method("POST")
      */
     public function createAction(Request $request)
@@ -69,7 +69,7 @@ class AccountController extends Controller
 
     /**
      *
-     * @Route("/login", name="login_route")
+     * @Route("/login", name="user_login")
      *
      */
     public function loginAction(Request $request)
@@ -91,6 +91,7 @@ class AccountController extends Controller
         );
     }
 
+
     /**
      *
      * @Route("/login_check", name="login_check")
@@ -101,6 +102,15 @@ class AccountController extends Controller
         // Handle by security systems
     }
 
+    /**
+     *
+     * @Route("/logout", name="user_logout")
+     *
+     */
+    public function logoutAction()
+    {
+
+    }
 
     /**
      *

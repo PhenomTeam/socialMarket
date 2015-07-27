@@ -2,7 +2,7 @@
 
 {% block body %}
 <h1>Register User</h1>
-{{ form_start(form, {'action': path('account_create'), 'method': 'POST'}) }}
+{{ form_start(form, {'action': path('create_user'), 'method': 'POST'}) }}
 
     {{ form_errors(form) }}
 
@@ -14,7 +14,7 @@
 
     <div>
         {#{{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder':'Email'}}) }}<br>#}
-        {{ =form_row(form.email) }}
+        {{ form_row(form.email) }}
     </div>
 
     <div>

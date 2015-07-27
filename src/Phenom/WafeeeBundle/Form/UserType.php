@@ -35,7 +35,10 @@ class UserType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Phenom\WafeeeBundle\Entity\User'
+            'data_class' => 'Phenom\WafeeeBundle\Entity\User',
+            'csrf_protection' => true,
+            'csrf_field_name' => '_csrf_token',
+            'intention' => 'authenticate',
         ));
     }
 
