@@ -46,4 +46,50 @@ class ShopFollow
     {
         return $this->id;
     }
+
+    /**
+     * Set shop_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Shop $shopId
+     * @return ShopFollow
+     */
+    public function setShopId(\Phenom\WafeeeBundle\Entity\Shop $shopId = null)
+    {
+        $this->shop_id = $shopId;
+
+        return $this;
+    }
+
+    /**
+     * Get shop_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Shop 
+     */
+    public function getShopId()
+    {
+        return $this->shop_id;
+    }
+
+    /**
+     * Set user_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\User $userId
+     * @return ShopFollow
+     */
+    public function setUserId(\Phenom\WafeeeBundle\Entity\User $userId = null)
+    {
+        $this->user_id = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Get user_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\User 
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
 }

@@ -19,6 +19,12 @@ class AccountController extends Controller
      */
     public function registerAction()
     {
+//        $this->denyAccessUnlessGranted('ROLE_USER');
+        $securityContext = $this->get('security.authorization_checker');
+        if($securityContext->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('index');
+        }
         $user = new User();
         $form = $this->createForm(new RegistrationType(), $user);
         return $this->render(
@@ -74,6 +80,11 @@ class AccountController extends Controller
      */
     public function loginAction(Request $request)
     {
+        $securityContext = $this->get('security.authorization_checker');
+        if($securityContext->isGranted('ROLE_USER'))
+        {
+            return $this->redirectToRoute('index');
+        }
         $authenticationUtils = $this->get('security.authentication_utils');
 
         // Get error if any
@@ -119,7 +130,7 @@ class AccountController extends Controller
      */
     public function adminPageAction()
     {
-        return Response("Admin page");
+        return new Response("Admin page");
     }
 
 }

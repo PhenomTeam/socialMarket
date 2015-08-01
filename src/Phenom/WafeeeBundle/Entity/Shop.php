@@ -34,6 +34,14 @@ class Shop
     private $name;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="avatarName", type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $avatarName;
+
+    /**
      *
      * @Assert\File(maxSize="2024k", mimeTypes={"image/jpeg", "image/png", "image/bmp", "image/gif"})
      */
@@ -131,5 +139,28 @@ class Shop
     public function getUserId()
     {
         return $this->user_id;
+    }
+
+    /**
+     * Set avatarName
+     *
+     * @param string $avatarName
+     * @return Shop
+     */
+    public function setAvatarName($avatarName)
+    {
+        $this->avatarName = $avatarName;
+
+        return $this;
+    }
+
+    /**
+     * Get avatarName
+     *
+     * @return string 
+     */
+    public function getAvatarName()
+    {
+        return $this->avatarName;
     }
 }

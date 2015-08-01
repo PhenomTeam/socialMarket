@@ -57,4 +57,73 @@ class OrderItem
     {
         return $this->id;
     }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     * @return OrderItem
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer 
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set order_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Orders $orderId
+     * @return OrderItem
+     */
+    public function setOrderId(\Phenom\WafeeeBundle\Entity\Orders $orderId = null)
+    {
+        $this->order_id = $orderId;
+
+        return $this;
+    }
+
+    /**
+     * Get order_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Orders 
+     */
+    public function getOrderId()
+    {
+        return $this->order_id;
+    }
+
+    /**
+     * Set product_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Product $productId
+     * @return OrderItem
+     */
+    public function setProductId(\Phenom\WafeeeBundle\Entity\Product $productId = null)
+    {
+        $this->product_id = $productId;
+
+        return $this;
+    }
+
+    /**
+     * Get product_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Product 
+     */
+    public function getProductId()
+    {
+        return $this->product_id;
+    }
 }

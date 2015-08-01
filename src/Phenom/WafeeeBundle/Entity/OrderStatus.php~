@@ -47,4 +47,50 @@ class OrderStatus
     {
         return $this->id;
     }
+
+    /**
+     * Set statusContent
+     *
+     * @param string $statusContent
+     * @return OrderStatus
+     */
+    public function setStatusContent($statusContent)
+    {
+        $this->statusContent = $statusContent;
+
+        return $this;
+    }
+
+    /**
+     * Get statusContent
+     *
+     * @return string 
+     */
+    public function getStatusContent()
+    {
+        return $this->statusContent;
+    }
+
+    /**
+     * Set order_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Orders $orderId
+     * @return OrderStatus
+     */
+    public function setOrderId(\Phenom\WafeeeBundle\Entity\Orders $orderId = null)
+    {
+        $this->order_id = $orderId;
+
+        return $this;
+    }
+
+    /**
+     * Get order_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Orders 
+     */
+    public function getOrderId()
+    {
+        return $this->order_id;
+    }
 }

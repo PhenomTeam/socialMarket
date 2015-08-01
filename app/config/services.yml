@@ -2,8 +2,27 @@
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
 #    parameter_name: value
+#    security.authentication.login_success_handler.class: Phenom\WafeeeBundle\Handler\LoginSuccessHandler
+#    security.authentication.logout_success_handler.class: Phenom\WafeeeBundle\Handler\LogoutSuccessHandler
+#    security.authentication.success_handler: Phenom\WafeeBundle\Handler\AuthenticationSuccessHandler
 
 services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+#    security.authentication.login_success_handler:
+#        class: Phenom\WafeeeBundle\Handler\LoginSuccessHandler
+#        arguments: [@service_container, @router, @security.authorization_checker]
+#        tags:
+#            - { name: 'monolog.logger', channel: 'security' }
+#
+#    security.authentication.logout_success_handler:
+#        class: Phenom\WafeeeBundle\Handler\LogoutSuccessHandler
+#        arguments: [@service_container, @router]
+#        tags:
+#            - { name: 'monolog.logger', channel: 'security' }
+    secrutity.authentication.success_handler:
+        class: Phenom\WafeeeBundle\Handler\AuthenticationSuccessHandler
+        arguments: [@security.http_utils, @service_container, {}]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }

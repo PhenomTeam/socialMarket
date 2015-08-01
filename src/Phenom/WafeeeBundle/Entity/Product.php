@@ -37,6 +37,14 @@ class Product
     private $price;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="imageName", type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $imageName;
+
+    /**
      *
      * @Assert\File(maxSize="2024k", mimeTypes={"image/jpeg", "image/png", "image/bmp", "image/gif"})
      */
@@ -159,5 +167,28 @@ class Product
     public function getInformation()
     {
         return $this->information;
+    }
+
+    /**
+     * Set imageName
+     *
+     * @param string $imageName
+     * @return Product
+     */
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    /**
+     * Get imageName
+     *
+     * @return string 
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
     }
 }
