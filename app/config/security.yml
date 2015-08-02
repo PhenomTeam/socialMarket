@@ -10,10 +10,33 @@ security:
             algorithm: bcrypt
             cost: 13
 
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN]
+
     firewalls:
-        default:
-            anonymous: ~
-            http_basic: ~
+        secured_area:
+            pattern: ^/.*
+#            http_basic: ~
+            form_login:
+                provider: our_db_provider
+                login_path: /login
+                check_path: /login_check
+#                success_handler: security.authentication.success_handler
+                csrf_provider: security.csrf.token_manager
+                intention: authenticate
+            logout:
+                path: /logout
+                target: /
+#                success_handler: security.authentication.logout_success_handler
+            anonymous: true
+            security: true
+            remember_me:
+                key: "%secret%"
+                lifetime: 604800
+                path: /
+
     access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         # require ROLE_ADMIN for /admin*
         - { path: ^/admin, roles: ROLE_ADMIN }

@@ -32,14 +32,14 @@ class CommentVote
 
     /**
      * @ManyToOne(targetEntity="Comment")
-     * @JoinColumn(name="comment_id", referencedColumnName="id")
+     * @JoinColumn(name="comment_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $comment_id;
 
 
     /**
      * @ManyToOne(targetEntity="User")
-     * @JoinColumn(name="user_id", referencedColumnName="id")
+     * @JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $user_id;
 

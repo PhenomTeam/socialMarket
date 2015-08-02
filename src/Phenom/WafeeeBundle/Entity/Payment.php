@@ -49,7 +49,7 @@ class Payment
 
     /**
      * @OneToOne(targetEntity="Orders")
-     * @JoinColumn(name="order_id", referencedColumnName="id")
+     * @JoinColumn(name="order_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $order_id;
 

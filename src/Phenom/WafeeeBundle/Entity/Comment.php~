@@ -85,4 +85,165 @@ class Comment
     {
         return $this->id;
     }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Comment
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * Set createDate
+     *
+     * @param \DateTime $createDate
+     * @return Comment
+     */
+    public function setCreateDate($createDate)
+    {
+        $this->createDate = $createDate;
+
+        return $this;
+    }
+
+    /**
+     * Get createDate
+     *
+     * @return \DateTime 
+     */
+    public function getCreateDate()
+    {
+        return $this->createDate;
+    }
+
+    /**
+     * Set updateDate
+     *
+     * @param \DateTime $updateDate
+     * @return Comment
+     */
+    public function setUpdateDate($updateDate)
+    {
+        $this->updateDate = $updateDate;
+
+        return $this;
+    }
+
+    /**
+     * Get updateDate
+     *
+     * @return \DateTime 
+     */
+    public function getUpdateDate()
+    {
+        return $this->updateDate;
+    }
+
+    /**
+     * Set type
+     *
+     * @param boolean $type
+     * @return Comment
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return boolean 
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set product_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Product $productId
+     * @return Comment
+     */
+    public function setProductId(\Phenom\WafeeeBundle\Entity\Product $productId = null)
+    {
+        $this->product_id = $productId;
+
+        return $this;
+    }
+
+    /**
+     * Get product_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Product 
+     */
+    public function getProductId()
+    {
+        return $this->product_id;
+    }
+
+    /**
+     * Set shop_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\Shop $shopId
+     * @return Comment
+     */
+    public function setShopId(\Phenom\WafeeeBundle\Entity\Shop $shopId = null)
+    {
+        $this->shop_id = $shopId;
+
+        return $this;
+    }
+
+    /**
+     * Get shop_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\Shop 
+     */
+    public function getShopId()
+    {
+        return $this->shop_id;
+    }
+
+    /**
+     * Set user_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\User $userId
+     * @return Comment
+     */
+    public function setUserId(\Phenom\WafeeeBundle\Entity\User $userId = null)
+    {
+        $this->user_id = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Get user_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\User 
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
 }

@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="Phenom\WafeeeBundle\Entity\ProductRepository")
  */
-class Product
+class Product extends MediaEntity implements ContentCDNInterface
 {
     /**
      * @var integer
@@ -35,6 +35,14 @@ class Product
      * @ORM\Column(name="price", type="float")
      */
     private $price;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imageName", type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $imageName;
 
     /**
      *
@@ -160,4 +168,77 @@ class Product
     {
         return $this->information;
     }
+
+    /**
+     * Set imageName
+     *
+     * @param string $imageName
+     * @return Product
+     */
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    /**
+     * Get imageName
+     *
+     * @return string 
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
+    }
+
+    /**
+     * @todo get object alias key
+     * @return string
+     */
+    public function getKind()
+    {
+        // TODO: Implement getKind() method.
+        return 'product';
+    }
+
+    public function uploadFile($adapter)
+    {
+        // TODO: Implement uploadFile() method.
+    }
+
+    public function deleteFile($adapter)
+    {
+        // TODO: Implement deleteFile() method.
+    }
+
+    public function getFile()
+    {
+        // TODO: Implement getFile() method.
+        return $this->getAbsolutePath($this->imageName);
+    }
+
+    public function setImageFile(UploadedFile $imageFile)
+    {
+        $this->imageFile = $imageFile;
+        $this->imageName = str_replace(" ", "_", $imageFile->getClientOriginalName());
+        try {
+            if(is_object($this->imageFile))
+            {
+                $this->imageFile->move($this->getUploadDir(), $this->imageName);
+                $this->imageFile = null;
+            }
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
 }

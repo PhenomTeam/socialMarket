@@ -33,13 +33,13 @@ class ShopVote
 
     /**
      * @ManyToOne(targetEntity="Shop")
-     * @JoinColumn(name="shop_id", referencedColumnName="id")
+     * @JoinColumn(name="shop_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $shop_id;
 
     /**
      * @ManyToOne(targetEntity="User")
-     * @JoinColumn(name="user_id", referencedColumnName="id")
+     * @JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $user_id;
 

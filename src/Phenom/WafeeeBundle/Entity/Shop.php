@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping\JoinColumn;
  * @ORM\Table(name="shop")
  * @ORM\Entity(repositoryClass="Phenom\WafeeeBundle\Entity\ShopRepository")
  */
-class Shop
+class Shop extends MediaEntity implements ContentCDNInterface
 {
     /**
      * @var integer
@@ -32,6 +32,14 @@ class Shop
      *
      */
     private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="avatarName", type="string", length=255, nullable=true)
+     *
+     */
+    private $avatarName;
 
     /**
      *
@@ -132,4 +140,77 @@ class Shop
     {
         return $this->user_id;
     }
+
+    /**
+     * Set avatarName
+     *
+     * @param string $avatarName
+     * @return Shop
+     */
+    public function setAvatarName($avatarName)
+    {
+        $this->avatarName = $avatarName;
+
+        return $this;
+    }
+
+    /**
+     * Get avatarName
+     *
+     * @return string 
+     */
+    public function getAvatarName()
+    {
+        return $this->avatarName;
+    }
+
+    /**
+     * @todo get object alias key
+     * @return string
+     */
+    public function getKind()
+    {
+        // TODO: Implement getKind() method.
+        return "shop";
+    }
+
+    public function uploadFile($adapter)
+    {
+        // TODO: Implement uploadFile() method.
+    }
+
+    public function deleteFile($adapter)
+    {
+        // TODO: Implement deleteFile() method.
+    }
+
+    public function getFile()
+    {
+        // TODO: Implement getFile() method.
+        return $this->getAbsolutePath($this->avatarName);
+    }
+
+    public function setAvatarFile(UploadedFile $avatarFile)
+    {
+        $this->avatarFile = $avatarFile;
+        $this->avatarName = str_replace(" ", "_", $avatarFile->getClientOriginalName());
+        try {
+            if(is_object($this->avatarFile))
+            {
+                $this->avatarFile->move($this->getUploadDir(), $this->avatarName);
+                $this->avatarFile = null;
+            }
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAvatarFile()
+    {
+        return $this->avatarFile;
+    }
+
 }

@@ -20,7 +20,7 @@ class RegistrationType extends AbstractType
                 'required' => true,
                 'first_options'  => array('attr' => array('placeholder' => 'Password'), 'label' => false),
                 'second_options' => array('attr' => array('placeholder' => 'Confirm Password'), 'label' => false)))
-            ->add('save', 'submit', ['label'=>'Register'])
+            ->add('submit', 'submit', ['label'=>'Register'])
             ;
     }
 
@@ -31,7 +31,10 @@ class RegistrationType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'Phenom\WafeeeBundle\Entity\User',
-            'attr' => array('novalidate'=>'novalidate')
+            'attr' => array('novalidate'=>'novalidate'),
+            'csrf_protection' => true,
+            'csrf_field_name' => '_csrf_token',
+            'intention' => 'authenticate',
         ));
     }
 

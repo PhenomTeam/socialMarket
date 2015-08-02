@@ -3,6 +3,7 @@
 namespace Phenom\WafeeeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -16,7 +17,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity(fields="email", message="Email already taken")
  * @UniqueEntity(fields="username", message="Username already taken")
  */
-class User implements UserInterface, \Serializable
+class User extends MediaEntity implements UserInterface, \Serializable, ContentCDNInterface
 {
     /**
      * @var string
@@ -75,10 +76,18 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="avatarName", type="string", length=255, nullable=true)
+     *
+     */
+    private $avatarName;
+
+    /**
      *
      * @Assert\File(maxSize="2024k", mimeTypes={"image/jpeg", "image/png", "image/bmp", "image/gif"})
      */
-    private $avatarPhoto;
+    private $avatarFile;
 
     /**
      * @var string
@@ -112,7 +121,13 @@ class User implements UserInterface, \Serializable
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string", length=255)
+     * @ORM\Column(name="password", type="string")
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 50,
+     *      minMessage = "Your password must be at least {{ limit }} characters long",
+     *      maxMessage = "Your password cannot be longer than {{ limit }} characters"
+     * )
      * @Assert\NotBlank()
      *
      */
@@ -359,6 +374,30 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * Set avatarName
+     *
+     * @param string $avatarName
+     * @return User
+     */
+    public function setAvatarName($avatarName)
+    {
+        $this->avatarName = $avatarName;
+
+        return $this;
+    }
+
+    /**
+     * Get avatarName
+     *
+     * @return string
+     */
+    public function getAvatarName()
+    {
+        return $this->avatarName;
+    }
+
+
+    /**
      * (PHP 5 &gt;= 5.1.0)<br/>
      * String representation of object
      * @link http://php.net/manual/en/serializable.serialize.php
@@ -367,6 +406,11 @@ class User implements UserInterface, \Serializable
     public function serialize()
     {
         // TODO: Implement serialize() method.
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+        ));
     }
 
     /**
@@ -381,6 +425,11 @@ class User implements UserInterface, \Serializable
     public function unserialize($serialized)
     {
         // TODO: Implement unserialize() method.
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+        ) = unserialize($serialized);
     }
 
     /**
@@ -402,6 +451,7 @@ class User implements UserInterface, \Serializable
     public function getRoles()
     {
         // TODO: Implement getRoles() method.
+        return array($this->role);
     }
 
     /**
@@ -414,6 +464,7 @@ class User implements UserInterface, \Serializable
     public function getSalt()
     {
         // TODO: Implement getSalt() method.
+        return null;
     }
 
     /**
@@ -426,5 +477,55 @@ class User implements UserInterface, \Serializable
     {
         // TODO: Implement eraseCredentials() method.
     }
+
+    public function uploadFile($adapter)
+    {
+        // TODO: Implement uploadFile() method.
+    }
+
+    public function deleteFile($adapter)
+    {
+        // TODO: Implement deleteFile() method.
+    }
+
+    public function getFile()
+    {
+        // TODO: Implement getFile() method.
+        return $this->getAbsolutePath($this->avatarName);
+    }
+
+    public function setAvatarFile(UploadedFile $avatarFile)
+    {
+        $this->avatarFile = $avatarFile;
+        $this->avatarName = str_replace(" ", "_", $avatarFile->getClientOriginalName());
+        try {
+            if(is_object($this->avatarFile))
+            {
+                $this->avatarFile->move($this->getUploadDir(), $this->avatarName);
+                $this->avatarFile = null;
+            }
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAvatarFile()
+    {
+        return $this->avatarFile;
+    }
+
+    /**
+     * @todo get object alias key
+     * @return string
+     */
+    public function getKind()
+    {
+        // TODO: Implement getKind() method.
+        return 'user';
+    }
+
 
 }

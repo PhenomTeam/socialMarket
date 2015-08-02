@@ -37,6 +37,14 @@ class Product
     private $price;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="imageName", type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $imageName;
+
+    /**
      *
      * @Assert\File(maxSize="2024k", mimeTypes={"image/jpeg", "image/png", "image/bmp", "image/gif"})
      */
@@ -67,5 +75,120 @@ class Product
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Product
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set price
+     *
+     * @param float $price
+     * @return Product
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float 
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     * @return Product
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer 
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set information
+     *
+     * @param string $information
+     * @return Product
+     */
+    public function setInformation($information)
+    {
+        $this->information = $information;
+
+        return $this;
+    }
+
+    /**
+     * Get information
+     *
+     * @return string 
+     */
+    public function getInformation()
+    {
+        return $this->information;
+    }
+
+    /**
+     * Set imageName
+     *
+     * @param string $imageName
+     * @return Product
+     */
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    /**
+     * Get imageName
+     *
+     * @return string 
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
     }
 }

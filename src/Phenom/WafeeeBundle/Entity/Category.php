@@ -44,7 +44,7 @@ class Category
 
     /**
      * @ManyToOne(targetEntity="Shop")
-     * @JoinColumn(name="shop_id", referencedColumnName="id")
+     * @JoinColumn(name="shop_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $shop_id;
 
