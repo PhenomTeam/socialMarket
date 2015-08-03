@@ -29,6 +29,13 @@ security:
                 path: /logout
                 target: /
 #                success_handler: security.authentication.logout_success_handler
+            oauth:
+                resource_owners:
+                    facebook:     "/login/check-facebook"
+                login_path:       /login
+                failure_path:      /login
+                oauth_user_provider:
+                    service: hwi_oauth.user.provider.entity
             anonymous: true
             security: true
             remember_me:

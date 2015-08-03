@@ -26,3 +26,6 @@ services:
         arguments: [@security.http_utils, @service_container, {}]
         tags:
             - { name: 'monolog.logger', channel: 'security' }
+
+    hwi_oauth.user.provider.entity:
+        class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
