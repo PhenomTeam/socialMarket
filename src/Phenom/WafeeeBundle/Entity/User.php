@@ -33,6 +33,13 @@ class User extends MediaEntity implements UserInterface, \Serializable, ContentC
     /**
      * @var string
      *
+     * @ORM\Column(name="facebook_id", type="string", length=255, unique=true, nullable=true)
+     */
+    protected $facebookId;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="firstname", type="string", length=100, nullable=true)
      */
     private $firstname;
@@ -66,7 +73,7 @@ class User extends MediaEntity implements UserInterface, \Serializable, ContentC
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=100)
+     * @ORM\Column(name="email", type="string", length=100, nullable=true)
      * @Assert\NotBlank()
      * @Assert\Email(
      *      message = "The email '{{ value }}' is not a valid email.",
@@ -528,4 +535,27 @@ class User extends MediaEntity implements UserInterface, \Serializable, ContentC
     }
 
 
+
+    /**
+     * Set facebookId
+     *
+     * @param string $facebookId
+     * @return User
+     */
+    public function setFacebookId($facebookId)
+    {
+        $this->facebookId = $facebookId;
+
+        return $this;
+    }
+
+    /**
+     * Get facebookId
+     *
+     * @return string 
+     */
+    public function getFacebookId()
+    {
+        return $this->facebookId;
+    }
 }

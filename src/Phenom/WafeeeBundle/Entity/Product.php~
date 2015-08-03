@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="Phenom\WafeeeBundle\Entity\ProductRepository")
  */
-class Product
+class Product extends MediaEntity implements ContentCDNInterface
 {
     /**
      * @var integer
@@ -191,4 +191,54 @@ class Product
     {
         return $this->imageName;
     }
+
+    /**
+     * @todo get object alias key
+     * @return string
+     */
+    public function getKind()
+    {
+        // TODO: Implement getKind() method.
+        return 'product';
+    }
+
+    public function uploadFile($adapter)
+    {
+        // TODO: Implement uploadFile() method.
+    }
+
+    public function deleteFile($adapter)
+    {
+        // TODO: Implement deleteFile() method.
+    }
+
+    public function getFile()
+    {
+        // TODO: Implement getFile() method.
+        return $this->getAbsolutePath($this->imageName);
+    }
+
+    public function setImageFile(UploadedFile $imageFile)
+    {
+        $this->imageFile = $imageFile;
+        $this->imageName = str_replace(" ", "_", $imageFile->getClientOriginalName());
+        try {
+            if(is_object($this->imageFile))
+            {
+                $this->imageFile->move($this->getUploadDir(), $this->imageName);
+                $this->imageFile = null;
+            }
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
 }

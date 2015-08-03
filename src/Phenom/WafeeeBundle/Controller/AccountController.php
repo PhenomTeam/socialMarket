@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Phenom\WafeeeBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class AccountController extends Controller
 {
@@ -63,6 +64,8 @@ class AccountController extends Controller
 
             $em->persist($user);
             $em->flush();
+
+            $this->authenticateUser($user);
 
             return $this->redirect($this->generateUrl('index'));
         }
@@ -131,6 +134,14 @@ class AccountController extends Controller
     public function adminPageAction()
     {
         return new Response("Admin page");
+    }
+
+    private function authenticateUser(User $user)
+    {
+        $providerKey = 'secured_area'; // your firewall name
+        $token = new UsernamePasswordToken($user, null, $providerKey, $user->getRoles());
+
+        $this->container->get('security.context')->setToken($token);
     }
 
 }

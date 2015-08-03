@@ -70,7 +70,7 @@ abstract class BaseEntity
         $this->updated_at = new \DateTime('now');
     }
 
-    public static function generateRandomString($length = 10)
+    public static function generateRandomString($length = 22)
     {
         $characters = '23456789abcdefghjklmnpqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $randomString = '';

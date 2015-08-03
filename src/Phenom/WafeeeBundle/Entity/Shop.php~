@@ -171,6 +171,7 @@ class Shop extends MediaEntity implements ContentCDNInterface
     public function getKind()
     {
         // TODO: Implement getKind() method.
+        return "shop";
     }
 
     public function uploadFile($adapter)
@@ -186,7 +187,30 @@ class Shop extends MediaEntity implements ContentCDNInterface
     public function getFile()
     {
         // TODO: Implement getFile() method.
+        return $this->getAbsolutePath($this->avatarName);
     }
 
+    public function setAvatarFile(UploadedFile $avatarFile)
+    {
+        $this->avatarFile = $avatarFile;
+        $this->avatarName = str_replace(" ", "_", $avatarFile->getClientOriginalName());
+        try {
+            if(is_object($this->avatarFile))
+            {
+                $this->avatarFile->move($this->getUploadDir(), $this->avatarName);
+                $this->avatarFile = null;
+            }
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAvatarFile()
+    {
+        return $this->avatarFile;
+    }
 
 }
