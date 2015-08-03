@@ -1,0 +1,26 @@
+.horizon-line {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-style: groove;
+}
+
+.footer-info {
+    float: left;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.footer-col {
+    height: auto;
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+#extend-footer {
+    float:left;
+    padding-left:auto;
+    padding-right:auto;
+    text-align: center;
+}

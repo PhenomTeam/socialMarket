@@ -1,0 +1,7 @@
+
+-fashion mask: background-color: #ed3a39
+-food and beverage mask: background-color: #000000
+-devices mask: background-color: #52b865
+-beauty products mask: background-color: #8c68ab
+-product size: 190px X 190px
+-product quick view size: 92px X 92px

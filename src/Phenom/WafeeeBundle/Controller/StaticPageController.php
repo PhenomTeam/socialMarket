@@ -13,6 +13,6 @@ class StaticPageController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('PhenomWafeeeBundle:Default:index.html.twig');
+        return $this->render('PhenomWafeeeBundle:StaticPage:index.html.twig');
     }
 }

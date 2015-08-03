@@ -29,6 +29,7 @@ services:
 
     hwi_oauth.user.provider.entity:
         class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
+
     ib_user.oauth_user_provider:
         class: Phenom\WafeeeBundle\Auth\OAuthProvider
         arguments: [@session, @doctrine, @service_container]

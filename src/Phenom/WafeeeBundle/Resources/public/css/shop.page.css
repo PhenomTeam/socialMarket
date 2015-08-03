@@ -1,0 +1,64 @@
+.product-line {
+    float: left;
+    width: 85em;
+    height: 4em;
+    background-color: #ed3a39;
+    text-align: center;
+}
+
+.price {
+    float: left;
+    width: 10em;
+    background-color: #1b809e;
+    margin-top: 1em;
+}
+
+.sale-off {
+    float: left;
+    width: 10em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.click-to-cart {
+    width: 5em;
+    float: right;
+    margin-top: 2em;
+}
+
+.product-vote {
+
+}
+
+
+.review-header {
+    background-color: white;
+}
+
+.review-body {
+    background-color: #e4b9b9;
+}
+
+.user-vote {
+    width: inherit;
+    padding-right: 5em;
+    text-align: right;
+    padding-bottom: 2em;
+    padding-top: 1em;
+}
+
+.review-data {
+    margin-left: 15em;
+    margin-right: 15em;
+    height: 10em;
+    overflow-y: auto;
+}
+
+.comment {
+    width: inherit;
+
+}
+
+.find-me {
+
+}

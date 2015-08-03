@@ -1,0 +1,21 @@
+.right-bar {
+    position: fixed;
+    margin-left: 87em;
+    width: 3em;
+    background-color: #444444;
+    margin-top: -11em;
+    height: 100%;
+}
+
+.right-bar-box {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+#right-bar-img {
+    margin-bottom: 2em;
+}
+
+.back-to-top {
+    margin-top: 12em;
+}

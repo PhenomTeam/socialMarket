@@ -1,0 +1,237 @@
+.cart-header {
+    background-color: #999999;
+    height: 3em;
+    width: inherit;
+    float: left;
+}
+
+.header-col {
+    background-color: inherit;
+    width: 16em;
+    float: left;
+    height: inherit;
+    padding-top: 1em;
+    text-align: center;
+}
+
+#header-item {
+    width: 21em;
+}
+
+#header-other {
+    border-left: 0.2em solid #F1F2F2;
+}
+
+.cart-body {
+    float: left;
+    width: 83em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+.cart-instance {
+    width: inherit;
+    height: auto;
+    margin-bottom: 1em;
+    background-color: #f3f3f3;
+}
+
+.cart-item {
+    width: 20em;
+    float: left;
+    background-color: inherit;
+}
+
+.cart-other {
+    float: left;
+    width: 16em;
+    background-color: inherit;
+    text-align: center;
+}
+
+.cart-total {
+    float: left;
+    width: 15em;
+    background-color: inherit;
+    text-align: center;
+}
+
+.product-item-img {
+    float: left;
+}
+
+.product-img-info {
+
+}
+
+
+
+.container {
+  padding: 0;
+  width: 80%;
+}
+.container .cart-logo img {
+  width: 25%;
+}
+.container .bar-title {
+  display: inline-block;
+  width: 100%;
+  float: left;
+}
+.container .bar-title p {
+  background-color: #545252;
+  display: inline-block;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  width: 18%;
+  border-left: 1px solid #FFFFFF;
+}
+.container .bar-title p:first-child {
+  width: 28%;
+}
+.container .un-use {
+  height: 15px;
+  float: left;
+  width: 100%;
+}
+.container .cart-item {
+  clear: left;
+  margin: 0 0 15px 0;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.container .cart-item div {
+  float: left;
+}
+.container .cart-item .first {
+  display: inline-block;
+  width: 28%;
+  padding-left: 15px;
+}
+.container .cart-item .first > div {
+  background-color: #babbba;
+  display: inline-block;
+  width: 100%;
+}
+.container .cart-item .first > div .avatar-item {
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+.container .cart-item .first > div .little-info {
+  display: inline-block;
+}
+.container .cart-item .first > div .little-info p {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.container .cart-item .first > div .little-info .name {
+  text-align: center;
+  font-weight: bold;
+}
+.container .cart-item .first > div .little-info .size-color {
+  font-size: 13px;
+}
+.container .cart-item .first > div .little-info .size-color img {
+  width: 20px;
+}
+.container .cart-item > div:not(:first-child) {
+  display: inline-block;
+  width: 18%;
+  position: absolute;
+  height: 100%;
+}
+.container .cart-item > div:not(:first-child) p {
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .cart-item .second {
+  background-color: #babbba;
+}
+.container .cart-item .third {
+  left: 46%;
+  background-color: #babbba;
+}
+.container .cart-item .fourth {
+  left: 64%;
+  background-color: #babbba;
+}
+.container .cart-item .fourth > div {
+  display: inline-block;
+  width: 100% ;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .cart-item .fourth > div input {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+.container .cart-item .fifth {
+  left: 82%;
+  padding-right: 15px;
+}
+.container .cart-item .fifth > div {
+  width: 100%;
+  height: 100%;
+  background-color: #babbba;
+  position: relative;
+}
+.container .cart-item .fifth > div a.remove {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  background-color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border-radius: 100%;
+}
+.container .bar-total {
+  display: inline-block;
+  width: 100%;
+}
+.container .bar-total > div {
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+.container .bar-total > div:first-child a {
+  color: #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  background-color: #545252;
+  float: left;
+  display: inline-block;
+  width: 50%;
+  text-decoration: none;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.container .bar-total > div:last-child > p {
+  width: 50%;
+  background-color: #babbba;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  display: inline-block;
+  float: left;
+}
+.container .bar-total > div:last-child > p:first-child {
+  padding-left: 10px;
+}

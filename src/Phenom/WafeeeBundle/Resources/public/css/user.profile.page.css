@@ -1,0 +1,62 @@
+.user-avarta {
+    padding-top: 2em;
+    padding-left: 2em;
+    width: 25em;
+    float: left;
+}
+
+.user-info {
+    float: left;
+    width: 32em;
+    padding-top: 2em;
+}
+
+.wrap-user-info-title {
+    width: 32em;
+    float: left;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.user-info-title {
+    background-color: #808080;
+    float: left;
+}
+
+.info {
+    text-align: right;
+    width: 10em;
+    float: left;
+}
+
+.data-info {
+    padding-left: 2em;
+    text-align: left;
+    width: 20em;
+    float: right;
+}
+
+#update-btn {
+    margin-left: 15em;
+    margin-top: 2em;
+    background-color: #3f3f3f;
+}
+
+.right-direction {
+    width: 28em;
+    float: left;
+}
+
+#user-vote {
+    margin-top: 1em;
+    margin-left: 15em;
+    margin-bottom: 34em;
+}
+
+.find-me-on {
+    padding-left: 5em;
+}
+
+.social-logo {
+    margin-left: 1em;
+}

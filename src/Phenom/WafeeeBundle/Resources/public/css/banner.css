@@ -1,0 +1,14 @@
+.banner {
+    float: left;
+    width: inherit;
+    height: 21em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: inherit;
+}
+
+#banner-img {
+    /*margin-left: 2em;*/
+    width: 87em;
+    height: 20em
+}

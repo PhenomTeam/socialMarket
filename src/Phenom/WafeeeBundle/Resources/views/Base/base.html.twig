@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}
+        <!-- Bootstrap -->
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    {% endblock %}
+
+    <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    {# include handed-code file #}
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/header.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/banner.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/right.bar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/content.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/footer.css') }}" />
+
+    {% block header %}
+
+        {#  include your expansive file   #}
+
+    {% endblock %}
+
+</head>
+
+<body style="width: 90em; margin-left: auto; margin-right: auto;">
+    <div class="left-bar" style="width: 87em; background-color: #f1f1f1;">
+        {#  HEADER    #}
+        <header class="header">
+
+            {#Logo    #}
+            <div id="Logo">
+                <img id="LogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}">
+            </div>
+
+        </header>
+
+
+
+        {#  NAVIGATION BAR    #}
+        <div class="navigation">
+
+            {#  SEARCH AREA    #}
+            <div class="search-field">
+
+                {#  SEARCH FILL   #}
+                <form id="search-form" method="post" style="float: left">
+                    <input id="search-text-area" type="text" name="search" placeholder="SEARCH...">
+                </form>
+
+                {#  ADVANCED SEARCH   #}
+                <div class="dropdown" style="float: left">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="caret"></span></button>
+                    <div class="dropdown-menu advanced-search">
+                        <form>
+                            <div class="advanced-search-col-1">
+                                <h5><b>TYPE</b></h5>
+                                <div class="col-1">
+                                    <input type="checkbox" name="shop"> Shop
+                                </div>
+                                <div class="col-2">
+                                    <input type="checkbox" name="product"> Product
+                                </div>
+                                <h5><b>CATEGORY</b></h5>
+                                <div class="col-1">
+                                    <input type="checkbox" name="fashion"> Fashion<br>
+                                    <input type="checkbox" name="devices"> Devices<br>
+                                    <input type="checkbox" name="other"> Other<br>
+                                </div>
+                                <div class="col-2">
+                                    <input type="checkbox" name="food-and-beverage"> Food and Beverage<br>
+                                    <input type="checkbox" name="beauty"> Beauty Products<br>
+                                </div>
+
+                            </div>
+                            <div class="advanced-search-col-2">
+                                <h5><b>PRICE</b></h5>
+                                <input type="radio" name="price" value="under-100"> Under 100,000<br>
+                                <input type="radio" name="price" value="100-200"> From 100,000 to 200,000<br>
+                                <input type="radio" name="price" value="200-500"> From 200,000 to 500,000<br>
+                                <input type="radio" name="price" value="over-500"> Over 500,000<br>
+                            </div>
+                            <div class="advanced-search-col-3">
+                                <h5><b>OTHER</b></h5>
+                                <input type="checkbox" name="promotion"> Having Promotion
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            {#  MENU    #}
+            <nav class="menu">
+                <ul class="nav nav-pills">
+
+                    {% block navbar %}
+
+                        <li><a href="#"><b>HOME</b></a></li>
+                        <li><a href="#"><b>CATEGORY</b></a></li>
+                        <li><a href="#"><b>CART</b></a></li>
+                        <li><a href="#"><b>FORUM</b></a></li>
+                        <li><a href="#"><b>HELP</b></a></li>
+                        <li><a href="#"><b>CONTACT</b></a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img id="MoreMenu" src="{{ asset('bundles/phenomwafeee/images/Base/MoreButton.png') }}">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><b>ABOUT US</b></a></li>
+                                <li><a href="#"><b>ABOUT ME</b></a></li>
+                                <li><a href="#"><b>ABOUT YOU</b></a></li>
+                            </ul>
+                        </li>
+
+                    {% endblock %}
+
+                </ul>
+            </nav>
+        </div>
+
+
+
+        {#  BANNER  #}
+        <div class="banner">
+
+            <div id="banner-slider" class="owl-carousel">
+
+                {#{% for i in 0..3 %}#}
+
+                <div>
+                    <a href="#"><img id="banner-img" class="img-rounded" alt="Cinque Terre" src="{{ asset('bundles/phenomwafeee/images/Base/Banner1.png') }}"></a>
+                </div>
+                <div>
+                    <a href="#"><img id="banner-img" class="img-rounded" alt="Cinque Terre" src="{{ asset('bundles/phenomwafeee/images/Base/Banner2.png') }}"></a>
+                </div>
+
+                {#{% endfor %}#}
+
+            </div>
+
+        </div>
+
+
+
+        {#  CONTENT    #}
+        <div style="float: left; width: inherit; padding-top: 1em; padding-bottom: 1em; background-color: inherit">
+
+            {% block content %}
+
+                <h1>This Is Content Block</h1>
+
+            {% endblock %}
+
+        </div>
+
+
+
+        {#  FOOTER  #}
+        <footer style="float: left; width: inherit; background-color: inherit">
+
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h5><b>SOCIAL MARKET</b></h5>
+                    <p><a href=""><font size="2">About Us</font></a></p>
+                    <p><a href=""><font size="2">Our Partners</font></a></p>
+                    <p><a href=""><font size="2">Jobs and Careers</font></a></p>
+                    <p><a href=""><font size="2">Sell on Social Market</font></a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h5><b>ASSISTANCE</b></h5>
+                    <p><a href=""><font size="2">Contact Us</font></a></p>
+                    <p><a href=""><font size="2">FAQs</font></a></p>
+                    <p><a href=""><font size="2">How To Buy</font></a></p>
+                    <p><a href=""><font size="2">Payment</font></a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h5><b>COMPANY POLICIES</b></h5>
+                    <p><a href=""><font size="2">Terms and Conditions</font></a></p>
+                    <p><a href=""><font size="2">Privacy Policy</font></a></p>
+                    <p><a href=""><p><font size="2">Warranty and Return</font></a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h5><b>SOCIAL MARKET BY PHENOM</b></h5>
+                    <input />
+                </div>
+
+            </div>
+
+            <div class="footer-info" style="text-align: center">
+                <p><font size="3">&copy; 2015 Social Market, Inc. All Rights Reserved</font></p>
+            </div>
+
+
+
+        </footer>
+
+
+
+
+    </div>
+
+
+
+    {#  RIGHT BAR   #}
+    <div class="right-bar">
+        {#Sign in and sign up    #}
+        <div class="right-bar-box">
+            <img id="right-bar-img" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignInModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignIn.png') }}">
+            <img class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignUpModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignUp.png') }}">
+        </div>
+
+        <hr>
+
+        <div class="right-bar-box">
+            <img id="right-bar-img" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Cart.png') }}">
+            <img class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Pay.png') }}">
+        </div>
+
+        <div class="back-to-top">
+            <img id="" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/BackToTop.png') }}" >
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Trigger the modal with a button -->
+
+    <div id="SignInModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    {#<h4 class="modal-title">Sign In</h4>#}
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="ModalLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}">
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 5%">
+                        <form role="form" style="margin-left: 15%; margin-right: 15%">
+                            <div class="form-group">
+                                <input id="username" type="text" class="form-control" placeholder="USER NAME" style="border-radius: 0%">
+                            </div>
+                            <div class="form-group">
+                                <input id="pwd" type="password" class="form-control" placeholder="PASSWORD" style="border-radius: 0%">
+                            </div>
+                            <div class="row">
+                                <div class="checkbox col-md-6" style="margin-top: 0%">
+                                    <label><input type="checkbox" > Remember me</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#" style="float: right">Forget your password</a>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class="row" style="margin-left: 15%; margin-right: 15%; margin-bottom: 5%">
+                            <div class="col-md-8" style="padding-left: 0%">
+                                Sign in with
+                                <a href="#"><img id="FacebookLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Facebook.png') }}"></a>
+                                <a href="#"><img id="GoogleplusLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Google-plus.png') }}"></a>
+                                <a href="#"><img id="TwitterLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Twitter.png') }}"></a>
+                            </div>
+                            <div class="col-md-4" style="padding-right: 0%">
+                                <button type="submit" class="btn btn-default" style="border-radius: 0%; float: right">SIGN IN</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="SignUpModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    {#<h4 class="modal-title">Sign In</h4>#}
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="ModalLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}">
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 5%">
+                        <form role="form" style="margin-left: 15%; margin-right: 15%">
+                            <div class="form-group">
+                                <input id="username" type="text" class="form-control" placeholder="USER NAME" style="border-radius: 0%">
+                            </div>
+                            <div class="form-group">
+                                <input id="pwd" type="password" class="form-control" placeholder="PASSWORD" style="border-radius: 0%">
+                            </div>
+                            <div class="form-group">
+                                <input id="pwd" type="password" class="form-control" placeholder="CONFIRM PASSWORD" style="border-radius: 0%">
+                            </div>
+                            <div class="row">
+                                <div class="checkbox col-md-6" style="margin-top: 0%">
+                                    <label style="float: right"><input type="radio"> Sale man</label>
+                                </div>
+                                <div class="checkbox col-md-6" style="margin-top: 0%">
+                                    <label style="float: left"><input type="radio"> Buyer</label>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class="row" style="margin-left: 15%; margin-right: 15%; margin-bottom: 5%">
+                            <div class="col-md-8" style="padding-left: 0%">
+                                Sign up with
+                                <a href="#"><img id="FacebookLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Facebook.png') }}"></a>
+                                <a href="#"><img id="GoogleplusLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Google-plus.png') }}"></a>
+                                <a href="#"><img id="TwitterLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Twitter.png') }}"></a>
+                            </div>
+                            <div class="col-md-4" style="padding-right: 0%">
+                                <button type="submit" class="btn btn-default" style="border-radius: 0%; float: right">SIGN UP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block javascripts %}
+        <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <!-- Include all JavaScripts, compiled by Assetic -->
+        <script src="{{ asset('js/bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/phenomwafeee/js/banner.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

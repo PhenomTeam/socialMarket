@@ -1,0 +1,136 @@
+.order-bar {
+    float: right;
+    width: 63em;
+    height: 5em;
+    background-color: #333333;
+}
+
+.panel-order{
+    margin-bottom: 0em
+}
+
+.navbar-order{
+    margin-bottom: 0em;
+    width: inherit;
+    height: inherit;
+    border-radius: 0em
+}
+
+.navbar-brand-order{
+    text-align: center;
+    width: inherit
+}
+
+.navbar-right-order{
+    width: 26em;
+    /*border: 2px solid;*/
+    margin-right: 0em
+}
+
+.navbar-nav-order{
+    width: 33em;
+    border: 2px solid;
+}
+
+.container-fluid-order{
+    padding-right: 0em;
+    padding-left: 0em
+}
+
+.navbar-header-order{
+    width: 25em;
+    border:
+    2px solid
+}
+
+.nav-order{
+    width: inherit;
+    height: inherit;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    border-radius: 0em;
+    border: none
+}
+
+.nav-tabs-order{
+    width: inherit;
+    height: inherit;
+    padding-left: 2em;
+    /*padding-right: 5em*/
+}
+
+.nav-tabs{
+    border-bottom: none;
+}
+
+.li-order{
+    height: inherit;
+    width: 20em
+}
+
+.li-order-second{
+    width: inherit;
+    text-align: center
+}
+
+.a-order{
+    border-radius: 0em;
+    height: inherit;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px
+}
+
+#confirmed #waiting #canceled{
+    height: inherit;
+}
+
+.panel-heading-order{
+    padding: 0em;
+}
+
+.panel-body-order{
+    background-color: #808080;
+    padding: 2em
+}
+
+.table-order{
+    background-color: #FFFFFF;
+    margin-bottom: 0em
+}
+
+.thead-order{
+    margin: 1em
+}
+
+.img-order{
+    float: left;
+    margin: 1em;
+}
+
+.span-order{
+    margin: 1em;
+}
+
+.row-order{
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+.col-order{
+    height: inherit;
+}
+.panel-footer{
+    padding: 0em;
+}
+th{
+    text-align: center;
+    padding: 0em;
+}
+td{
+    text-align: center;
+}
+
+table{
+    border-collapse: separate;
+}
