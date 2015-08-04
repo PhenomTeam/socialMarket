@@ -1,83 +1,53 @@
-{% extends '::base.html.twig' %}
 
-{% block body %}
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    <div id="SignInModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-    <form action="{{ path('login_check') }}" method="post">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    {#<h4 class="modal-title">Sign In</h4>#}
+                </div> {# END OF MODAL HEADER #}
 
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="ModalLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}">
+                        </div>
+                    </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password" />
+                    <div class="row" style="margin-top: 5%">
+                        <form action="{{ path('login_check') }}" method="post" role="form" style="margin-left: 15%; margin-right: 15%">
+                            <div class="form-group">
+                                <input type="text" id="username" name="_username" placeholder="User Name" class="form-control" style="border-radius: 0%" value="{{ last_username }}" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="password" class="form-control" placeholder="Password" style="border-radius: 0%" name="_password" />
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                            </div>
+                            <div class="row">
+                                <div class="checkbox col-md-6" style="margin-top: 0%">
+                                    <label for="remember_me"><input type="checkbox" id="remember_me" name="_remember_me" checked> Remember me</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#" style="float: right; color: #333333">Forget your password</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default" style="border-radius: 0%; float: right">Sign In</button>
 
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                        </form>
 
-        <input type="checkbox" id="remember_me" name="_remember_me" checked />
-        <label for="remember_me">Keep me logged in</label>
-
-        {#
-            If you want to control the URL the user
-            is redirected to on success (more details below)
-            <input type="hidden" name="_target_path" value="/account" />
-        #}
-
-        <button type="submit">login</button>
-    </form>
-{% endblock %}
-
-{% block content %}
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-            // init the FB JS SDK
-            FB.init({
-                appId      : '460750337431923',                        // App ID from the app dashboard
-                channelUrl : '//localhost:8000/channel.html',      // Channel file for x-domain comms
-                status     : true,                                 // Check Facebook Login status
-                xfbml      : true                                  // Look for social plugins on the page
-            });
-        };
-
-        // Load the SDK asynchronously
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        function fb_login() {
-            FB.getLoginStatus(function(response) {
-                if (response.status === 'connected') {
-                    // connected
-                    alert('Already connected, redirect to login page to create token.');
-                    document.location = "{{ url("hwi_oauth_service_redirect", {service: "facebook"}) }}";
-                } else {
-                    // not_authorized
-                    FB.login(function(response) {
-                        if (response.authResponse) {
-                            document.location = "{{ url("hwi_oauth_service_redirect", {service: "facebook"}) }}";
-                        } else {
-                            alert('Cancelled.');
-                        }
-                    }, {scope: 'email'});
-                }
-            });
-        }
-    </script>
-
-    {#<h1 class="title">Hello {{ name }}!</h1>#}
-
-    {#<a href="{{ path('_demo_secured_hello_admin', { 'name': name }) }}">Hello resource secured for <strong>admin</strong> only.</a>#}
-
-    <p>
-        <a href="#" onclick="fb_login();">Facebook Connect Button (Dialog)</a>
-    </p>
-
-    {# Bonus: Show all available login link in HWIOAuthBundle #}
-    {% render(controller('HWIOAuthBundle:Connect:connect')) %}
-{% endblock %}
+                        <div class="row" style="margin-left: 15%; margin-right: 15%; margin-bottom: 5%">
+                            <div id="fb-root"></div>
+                            <div class="col-md-8" style="padding-left: 0%">
+                                Sign in with
+                                <a href="#" onclick="fb_login();"><img id="FacebookLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Facebook.png') }}"></a>
+                                <a href="#"><img id="GoogleplusLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Google-plus.png') }}"></a>
+                                <a href="#"><img id="TwitterLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Twitter.png') }}"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> {# END OF MODAL BODY #}
+            </div>
+        </div>
+    </div> {# END OF SIGN IN MODAL #}

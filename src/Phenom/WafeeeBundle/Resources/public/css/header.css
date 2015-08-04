@@ -5,6 +5,12 @@
     padding-bottom: 1em;
 }
 
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 #Logo {
     margin-left: 2em;
 }

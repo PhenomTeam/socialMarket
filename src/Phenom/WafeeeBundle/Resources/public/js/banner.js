@@ -4,11 +4,12 @@ $(document).ready(function () {
         items:1,
         loop:true,
         //margin:10,
+        //animateOut: 'slideOutLeft',
+        //animateIn: 'slideInRight',
+        lazyLoad:true,
         autoplay:true,
-        autoplayTimeout: 1500,
+        autoplayTimeout: 2000,
         autoplayHoverPause:true
     });
-
-
 
 });

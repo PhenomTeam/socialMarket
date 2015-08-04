@@ -39,8 +39,10 @@ class AccountController extends Controller
      * @Route("/register", name="create_user")
      * @Method("POST")
      */
-    public function createAction(Request $request)
+    public function createAction()
     {
+        $request = $this->get('request');
+
         $em = $this->getDoctrine()->getManager();
 
         $user = new User();
@@ -81,8 +83,10 @@ class AccountController extends Controller
      * @Route("/login", name="user_login")
      *
      */
-    public function loginAction(Request $request)
+    public function loginAction()
     {
+        $request = $this->get("request");
+
         $securityContext = $this->get('security.authorization_checker');
         if($securityContext->isGranted('ROLE_USER'))
         {

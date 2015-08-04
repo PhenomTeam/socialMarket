@@ -5,7 +5,7 @@ $(document).ready(function () {
         loop:true,
         margin:10,
         autoplay:true,
-        autoplayTimeout:2000,
+        autoplayTimeout:1500,
         autoplayHoverPause:true
     });
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
         loop:true,
         margin:10,
         autoplay:true,
-        autoplayTimeout:2000,
+        autoplayTimeout:1500,
         autoplayHoverPause:true
     });
 

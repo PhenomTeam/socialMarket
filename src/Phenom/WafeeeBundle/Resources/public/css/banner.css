@@ -1,14 +1,14 @@
 .banner {
-    float: left;
     width: inherit;
-    height: 21em;
+    height: auto;
     padding-top: 1em;
     padding-bottom: 1em;
     background-color: inherit;
 }
 
-#banner-img {
-    /*margin-left: 2em;*/
+
+.banner #banner-slider > div a img {
     width: 87em;
-    height: 20em
+    height: auto;
 }
+

@@ -1,12 +1,196 @@
 {% extends 'PhenomWafeeeBundle:Base:base.html.twig' %}
 
-{% block title %}
+{% block title %}Home Page{% endblock %}
 
-{% block body %}
-    {% if(app.user) %}
-        Hello {{ app.user.username }}
-    {% else %}
-        Hello
-    {% endif %}
-    <a href="{{ path('user_logout') }}">Logout</a>
+{#  INCLUDE HANDED-CODE FILE    #}
+{% block header %}
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/home.page.css') }}" />
+
+{% endblock %}
+
+{% block content %}
+
+    {#  FASHION SHOPS   #}
+    <div class="content-field">
+        {#  FASHION SHOP HEADER     #}
+        <div class="content-header clearfix">
+            <div class="category">
+                <img src="{{ asset('bundles/phenomwafeee/images/fashion.png') }}">
+            </div>
+            <div id="fashion-bar" class="product-bar">
+                <nav>
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="cap-product">
+                            <a data-toggle="tab" href="#cap">
+                                <img src="{{ asset('bundles/phenomwafeee/images/cap.png') }}">
+                            </a>
+                        </li>
+                        <li id="shoe-product">
+                            <a data-toggle="tab" href="#shoe">
+                                <img src="{{ asset('bundles/phenomwafeee/images/shoe.png') }}">
+                            </a>
+                        </li>
+                        <li id="jacket-product">
+                            <a data-toggle="tab" href="#jacket">
+                                <img src="{{ asset('bundles/phenomwafeee/images/jacket.png') }}">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        {#  FASHION SHOP CONTENT    #}
+        <div class="content-body">
+            <div id="fashion-shop-img" class="owl-carousel">
+
+                {% for i in 0..3 %}
+
+                    <div class="clearfix">
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-1.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-2.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-1.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-2.png') }}"></a>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {#  BEAUTY SHOP CONTENT   #}
+    <div class="content-field">
+        {#  BEAUTY-PRODUCT SHOP HEADER     #}
+        <div class="content-header clearfix">
+            <div class="category">
+                <img src="{{ asset('bundles/phenomwafeee/images/beauty.png') }}" >
+            </div>
+            <div id="beauty-product-bar" class="product-bar">
+                <nav>
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="cap-product">
+                            <a data-toggle="tab" href="#cap">
+                                <img src="{{ asset('bundles/phenomwafeee/images/cream.png') }}">
+                            </a>
+                        </li>
+                        <li id="shoe-product">
+                            <a data-toggle="tab" href="#shoe">
+                                <img src="{{ asset('bundles/phenomwafeee/images/lipstick.png') }}">
+                            </a>
+                        </li>
+                        <li id="jacket-product">
+                            <a data-toggle="tab" href="#jacket">
+                                <img src="{{ asset('bundles/phenomwafeee/images/perfum.png') }}">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        {#  BEAUTY SHOP CONTENT    #}
+        <div class="content-body">
+            <div id="beauty-shop-img" class="owl-carousel">
+
+                {% for i in 0..3 %}
+
+                    <div class="clearfix">
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-3.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-4.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-1.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-2.png') }}"></a>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {#  DEVICES SHOP CONTENT   #}
+    <div class="content-field">
+        {#  BEAUTY-PRODUCT SHOP HEADER     #}
+        <div class="content-header clearfix">
+            <div class="category">
+                <img src="{{ asset('bundles/phenomwafeee/images/food-beverage.png') }}">
+            </div>
+            <div id="food-and-beverage-bar" class="product-bar">
+                <nav>
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="cap-product">
+                            <a data-toggle="tab" href="#cap">
+                                <img src="{{ asset('bundles/phenomwafeee/images/bottle.png') }}">
+                            </a>
+                        </li>
+                        <li id="shoe-product">
+                            <a data-toggle="tab" href="#shoe">
+                                <img src="{{ asset('bundles/phenomwafeee/images/cookie.png') }}">
+                            </a>
+                        </li>
+                        <li id="jacket-product">
+                            <a data-toggle="tab" href="#jacket">
+                                <img src="{{ asset('bundles/phenomwafeee/images/fruit.png') }}">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        {#  DEVICES SHOP CONTENT    #}
+        <div class="content-body">
+            <div id="device-shop-img" class="owl-carousel">
+
+                {% for i in 0..3 %}
+
+                    <div class="clearfix">
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-5.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-6.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-1.png') }}"></a>
+                        </div>
+                        <div class="img-field">
+                            <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/shop-2.png') }}"></a>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/phenomwafeee/js/homepage.js') }}"></script>
 {% endblock %}

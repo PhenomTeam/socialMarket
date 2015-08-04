@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/right.bar.css') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/content.css') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/footer.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/owl.carousel.css') }}" />
+    {#<link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/animate.css') }}" />#}
 
     {% block header %}
 
@@ -30,14 +32,14 @@
 
 </head>
 
-<body style="width: 90em; margin-left: auto; margin-right: auto;">
-    <div class="left-bar" style="width: 87em; background-color: #f1f1f1;">
+<body class="clearfix" style="width: 90em; margin: auto;">
+    <div class="left-bar clearfix" style="width: 87em; background-color: #f1f1f1; float: left">
         {#  HEADER    #}
         <header class="header">
 
             {#Logo    #}
             <div id="Logo">
-                <img id="LogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}">
+                <a href="{{ path('index') }}"><img id="LogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}"></a>
             </div>
 
         </header>
@@ -45,10 +47,10 @@
 
 
         {#  NAVIGATION BAR    #}
-        <div class="navigation">
+        <div class="navigation clearfix">
 
             {#  SEARCH AREA    #}
-            <div class="search-field">
+            <div class="search-field clearfix">
 
                 {#  SEARCH FILL   #}
                 <form id="search-form" method="post" style="float: left">
@@ -106,7 +108,7 @@
 
                     {% block navbar %}
 
-                        <li><a href="#"><b>HOME</b></a></li>
+                        <li><a href="{{ path('index') }}"><b>HOME</b></a></li>
                         <li><a href="#"><b>CATEGORY</b></a></li>
                         <li><a href="#"><b>CART</b></a></li>
                         <li><a href="#"><b>FORUM</b></a></li>
@@ -117,9 +119,7 @@
                                 <img id="MoreMenu" src="{{ asset('bundles/phenomwafeee/images/Base/MoreButton.png') }}">
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><b>ABOUT US</b></a></li>
-                                <li><a href="#"><b>ABOUT ME</b></a></li>
-                                <li><a href="#"><b>ABOUT YOU</b></a></li>
+                                <li><a href="{{ path('about_page') }}"><b>ABOUT US</b></a></li>
                             </ul>
                         </li>
 
@@ -132,11 +132,11 @@
 
 
         {#  BANNER  #}
+
+    {% block slider %}
         <div class="banner">
 
-            <div id="banner-slider" class="owl-carousel">
-
-                {#{% for i in 0..3 %}#}
+            <div id="banner-slider" class="owl-carousel owl-theme">
 
                 <div>
                     <a href="#"><img id="banner-img" class="img-rounded" alt="Cinque Terre" src="{{ asset('bundles/phenomwafeee/images/Base/Banner1.png') }}"></a>
@@ -145,16 +145,14 @@
                     <a href="#"><img id="banner-img" class="img-rounded" alt="Cinque Terre" src="{{ asset('bundles/phenomwafeee/images/Base/Banner2.png') }}"></a>
                 </div>
 
-                {#{% endfor %}#}
-
             </div>
 
         </div>
-
+    {% endblock %}
 
 
         {#  CONTENT    #}
-        <div style="float: left; width: inherit; padding-top: 1em; padding-bottom: 1em; background-color: inherit">
+        <div class="contents">
 
             {% block content %}
 
@@ -167,7 +165,7 @@
 
 
         {#  FOOTER  #}
-        <footer style="float: left; width: inherit; background-color: inherit">
+        <footer style="width: inherit; background-color: inherit">
 
             <div class="footer-info">
                 <div class="footer-col">
@@ -204,11 +202,7 @@
                 <p><font size="3">&copy; 2015 Social Market, Inc. All Rights Reserved</font></p>
             </div>
 
-
-
         </footer>
-
-
 
 
     </div>
@@ -216,18 +210,18 @@
 
 
     {#  RIGHT BAR   #}
-    <div class="right-bar">
+    <div class="right-bar clearfix" style="float: left">
         {#Sign in and sign up    #}
         <div class="right-bar-box">
-            <img id="right-bar-img" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignInModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignIn.png') }}">
-            <img class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignUpModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignUp.png') }}">
+            <img id="right-bar-login" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignInModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignIn.png') }}">
+            <img id="right-bar-signup" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignUpModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignUp.png') }}">
         </div>
 
         <hr>
 
         <div class="right-bar-box">
-            <img id="right-bar-img" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Cart.png') }}">
-            <img class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Pay.png') }}">
+            <img id="right-bar-cart" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Cart.png') }}">
+            <img id="right-bar-payment" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Pay.png') }}">
         </div>
 
         <div class="back-to-top">
@@ -238,117 +232,23 @@
     </div>
 
 
-
     <!-- Trigger the modal with a button -->
 
-    <div id="SignInModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    {% block login_form %}
+        {% if app.user %}
+            fuck
+        {% else %}
+            {{ render(controller('PhenomWafeeeBundle:Account:login')) }}
+        {% endif %}
+    {% endblock %}
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    {#<h4 class="modal-title">Sign In</h4>#}
-                </div>
-
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img id="ModalLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}">
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 5%">
-                        <form role="form" style="margin-left: 15%; margin-right: 15%">
-                            <div class="form-group">
-                                <input id="username" type="text" class="form-control" placeholder="USER NAME" style="border-radius: 0%">
-                            </div>
-                            <div class="form-group">
-                                <input id="pwd" type="password" class="form-control" placeholder="PASSWORD" style="border-radius: 0%">
-                            </div>
-                            <div class="row">
-                                <div class="checkbox col-md-6" style="margin-top: 0%">
-                                    <label><input type="checkbox" > Remember me</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="#" style="float: right">Forget your password</a>
-                                </div>
-                            </div>
-
-                        </form>
-
-                        <div class="row" style="margin-left: 15%; margin-right: 15%; margin-bottom: 5%">
-                            <div class="col-md-8" style="padding-left: 0%">
-                                Sign in with
-                                <a href="#"><img id="FacebookLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Facebook.png') }}"></a>
-                                <a href="#"><img id="GoogleplusLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Google-plus.png') }}"></a>
-                                <a href="#"><img id="TwitterLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Twitter.png') }}"></a>
-                            </div>
-                            <div class="col-md-4" style="padding-right: 0%">
-                                <button type="submit" class="btn btn-default" style="border-radius: 0%; float: right">SIGN IN</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="SignUpModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    {#<h4 class="modal-title">Sign In</h4>#}
-                </div>
-
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img id="ModalLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Logo.png') }}">
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 5%">
-                        <form role="form" style="margin-left: 15%; margin-right: 15%">
-                            <div class="form-group">
-                                <input id="username" type="text" class="form-control" placeholder="USER NAME" style="border-radius: 0%">
-                            </div>
-                            <div class="form-group">
-                                <input id="pwd" type="password" class="form-control" placeholder="PASSWORD" style="border-radius: 0%">
-                            </div>
-                            <div class="form-group">
-                                <input id="pwd" type="password" class="form-control" placeholder="CONFIRM PASSWORD" style="border-radius: 0%">
-                            </div>
-                            <div class="row">
-                                <div class="checkbox col-md-6" style="margin-top: 0%">
-                                    <label style="float: right"><input type="radio"> Sale man</label>
-                                </div>
-                                <div class="checkbox col-md-6" style="margin-top: 0%">
-                                    <label style="float: left"><input type="radio"> Buyer</label>
-                                </div>
-                            </div>
-
-                        </form>
-
-                        <div class="row" style="margin-left: 15%; margin-right: 15%; margin-bottom: 5%">
-                            <div class="col-md-8" style="padding-left: 0%">
-                                Sign up with
-                                <a href="#"><img id="FacebookLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Facebook.png') }}"></a>
-                                <a href="#"><img id="GoogleplusLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Google-plus.png') }}"></a>
-                                <a href="#"><img id="TwitterLogoImg" src="{{ asset('bundles/phenomwafeee/images/Base/Twitter.png') }}"></a>
-                            </div>
-                            <div class="col-md-4" style="padding-right: 0%">
-                                <button type="submit" class="btn btn-default" style="border-radius: 0%; float: right">SIGN UP</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% block sign_up_form %}
+        {% if app.user %}
+            fuck
+        {% else %}
+            {{ render(controller('PhenomWafeeeBundle:Account:create')) }}
+        {% endif %}
+    {% endblock %}
 
     {% block javascripts %}
         <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
@@ -356,6 +256,47 @@
         <!-- Include all JavaScripts, compiled by Assetic -->
         <script src="{{ asset('js/bootstrap.js') }}"></script>
         <script src="{{ asset('bundles/phenomwafeee/js/banner.js') }}"></script>
+        <script src="{{ asset('bundles/phenomwafeee/js/owl.carousel.min.js') }}"></script>
+
+        <script>
+            window.fbAsyncInit = function() {
+                // init the FB JS SDK
+                FB.init({
+                    appId      : '460750337431923',                        // App ID from the app dashboard
+                    channelUrl : '//localhost:8000/channel.html',      // Channel file for x-domain comms
+                    status     : true,                                 // Check Facebook Login status
+                    xfbml      : true                                  // Look for social plugins on the page
+                });
+            };
+
+            // Load the SDK asynchronously
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            function fb_login() {
+                FB.getLoginStatus(function(response) {
+                    if (response.status === 'connected') {
+                        // connected
+                        alert('Already connected, redirect to login page to create token.');
+                        document.location = "{{ url("hwi_oauth_service_redirect", {service: "facebook"}) }}";
+                    } else {
+                        // not_authorized
+                        FB.login(function(response) {
+                            if (response.authResponse) {
+                                document.location = "{{ url("hwi_oauth_service_redirect", {service: "facebook"}) }}";
+                            } else {
+                                alert('Cancelled.');
+                            }
+                        }, {scope: 'email'});
+                    }
+                });
+            }
+        </script>
     {% endblock %}
 </body>
 </html>

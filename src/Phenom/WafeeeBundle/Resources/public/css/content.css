@@ -1,21 +1,18 @@
 .content-field {
-    padding-left: 2em;
+    margin-left: 2em;
     width: inherit;
-    float: left;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     background-color: inherit;
 }
 
 .content-header {
     width: 85em;
-    float: left;
 }
 
 .content-body {
     background-color: #ffffff;
     width: 85em;
-    float: left;
-    padding-bottom: 1em
+    padding-bottom: 1em;
 }
 
 .category {

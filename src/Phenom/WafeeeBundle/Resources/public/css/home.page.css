@@ -3,9 +3,23 @@
 }
 
 #beauty-product-bar {
-
+    background-color: #8d68ac;
 }
 
 #food-and-beverage-bar {
+    background-color: #ffcc05;
+}
 
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus{
+    background-color: #52b965 !important;
+}
+
+.category img {
+    width: 280px;
+    height: 104px;
+}
+
+.product-bar ul > li a img {
+    width: 68px;
+    height: 68px;
 }

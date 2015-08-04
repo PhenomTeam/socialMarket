@@ -1,0 +1,45 @@
+{% extends ('PhenomWafeeeBundle:Base:base.html.twig') %}
+
+{#  INCLUDE HANDED-CODE FILE    #}
+{% block header %}
+    <link rel="stylesheet" href="{{ asset('bundles/framework/css/about.page.css') }}" />
+
+{% endblock %}
+
+{#  TITLE   #}
+{% block title %} About us {% endblock %}
+
+{#  CONTENT   #}
+
+{% block slider %}
+
+{% endblock %}
+{% block content %}
+
+    {#  ABOUT US   #}
+    <div class="content-field">
+        {#  FASHION SHOP HEADER     #}
+        <div class="content-header">
+            <div class="category">
+                <img src="{{ asset('bundles/phenomwafeee/images/AboutPage/AboutUsField.png') }}" width="80%">
+            </div>
+        </div>
+
+        {#  ABOUT US CONTENT    #}
+        <div class="content-body">
+            <div class="content-body-header">
+                <img src="{{ asset('bundles/phenomwafeee/images/AboutPage/Logo.png') }}">
+            </div>
+            <div class="content-body-info">
+                <p>With the development of Internet, especially social network such as Facebook, Instagram…, online purchase in Vietnam nowadays grows strongly. However, online shops are lack of customers due to the fact that customers do not have much belief on products; on the other hand, online buyers want diversified products with good quality and reasonable price. Our goal is to create an interactive environment for both online shops and online buyers. We believe that our website will become one of the leading online purchasing website in Vietnam.</p>
+            </div>
+            <div class="content-body-footer">
+                <span>Follow us on:</span>
+                <a href="http://facebook.com/nmt0504" target="_blank"><img src="{{ asset('bundles/phenomwafeee/images/AboutPage/Facebook.png') }}"></a>
+                <a href="#"><img src="{{ asset('bundles/phenomwafeee/images/AboutPage/Google-plus.png') }}"></a>
+                <a href="#"><img src="{{ asset('bundles/phenomwafeee/images/AboutPage/Twitter.png') }}"></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
