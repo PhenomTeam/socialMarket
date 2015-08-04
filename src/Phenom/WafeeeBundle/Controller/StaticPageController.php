@@ -24,4 +24,13 @@ class StaticPageController extends Controller
     {
         return $this->render('PhenomWafeeeBundle:StaticPage:about_us.html.twig');
     }
+
+    /**
+     * @Route("/contact", name="contact_page")
+     *
+     */
+    public function contactAction()
+    {
+        return $this->render('PhenomWafeeeBundle:StaticPage:contact_us.html.twig');
+    }
 }

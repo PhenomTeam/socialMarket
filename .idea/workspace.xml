@@ -66,20 +66,47 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-58.074074" vertical-offset="1852" max-vertical-offset="3618">
+            <state vertical-scroll-proportion="-126.44444" vertical-offset="6" max-vertical-offset="3618">
               <caret line="190" column="14" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StaticPageController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StaticPageController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/StaticPageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39593908" vertical-offset="0" max-vertical-offset="591">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state vertical-scroll-proportion="-17.88889" vertical-offset="93" max-vertical-offset="738">
+              <caret line="33" column="80" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
               <folding>
                 <element signature="e#534#584#1#PHP" expanded="true" />
+                <element signature="e#735#787#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact_us.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/contact_us.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34256056" vertical-offset="0" max-vertical-offset="1980">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#13#51#0#Twig" expanded="true" />
+                <element signature="e#909#927#0#HTML" expanded="true" />
+                <element signature="e#1092#1126#0#HTML" expanded="true" />
+                <element signature="e#1645#1679#0#HTML" expanded="true" />
+                <element signature="e#2016#2075#0#HTML" expanded="true" />
+                <element signature="e#2224#2243#0#HTML" expanded="true" />
+                <element signature="e#2428#2447#0#HTML" expanded="true" />
+                <element signature="e#2559#2618#0#HTML" expanded="true" />
+                <element signature="e#2769#2788#0#HTML" expanded="true" />
+                <element signature="e#2970#2989#0#HTML" expanded="true" />
+                <element signature="e#3101#3160#0#HTML" expanded="true" />
+                <element signature="e#3216#3235#0#HTML" expanded="true" />
+                <element signature="e#3336#3373#0#HTML" expanded="true" />
+                <element signature="e#3485#3544#0#HTML" expanded="true" />
+                <element signature="e#3590#3628#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,13 +115,14 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.851852" vertical-offset="2299" max-vertical-offset="5526">
-              <caret line="135" column="22" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
+            <state vertical-scroll-proportion="-19.518518" vertical-offset="1705" max-vertical-offset="5526">
+              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
                 <element signature="e#451#501#0#Twig" expanded="true" />
                 <element signature="e#1737#1742#0#Twig" expanded="true" />
                 <element signature="e#4924#4929#0#Twig" expanded="true" />
-                <element signature="e#5658#5668#0#Twig" expanded="true" />
+                <element signature="e#5252#5264#0#Twig" expanded="true" />
+                <element signature="e#5683#5693#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVote.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopFollow.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/OrderStatus.php" />
@@ -153,9 +180,10 @@
         <option value="$PROJECT_DIR$/web/bundles/phenomwafeee/js/homepage.js" />
         <option value="$PROJECT_DIR$/web/bundles/phenomwafeee/css/home.page.css" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/StaticPageController.php" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/about_us.html.twig" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/StaticPageController.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/contact_us.html.twig" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig" />
       </list>
     </option>
   </component>
@@ -1001,13 +1029,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/cache/dev/classes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44117647" vertical-offset="44799" max-vertical-offset="134892">
-          <caret line="2594" column="1" selection-start-line="2594" selection-start-column="1" selection-end-line="2594" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/MediaEntity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3401015" vertical-offset="201" max-vertical-offset="900">
@@ -1344,9 +1365,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/about_us.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0034602077" vertical-offset="322" max-vertical-offset="900">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#13#51#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/StaticPageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.88889" vertical-offset="93" max-vertical-offset="738">
+          <caret line="33" column="80" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
+          <folding>
+            <element signature="e#534#584#1#PHP" expanded="true" />
+            <element signature="e#735#787#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-58.074074" vertical-offset="1852" max-vertical-offset="3618">
+        <state vertical-scroll-proportion="-126.44444" vertical-offset="6" max-vertical-offset="3618">
           <caret line="190" column="14" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
           <folding />
         </state>
@@ -1354,33 +1396,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.851852" vertical-offset="2299" max-vertical-offset="5526">
-          <caret line="135" column="22" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
+        <state vertical-scroll-proportion="-19.518518" vertical-offset="1705" max-vertical-offset="5526">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
             <element signature="e#451#501#0#Twig" expanded="true" />
             <element signature="e#1737#1742#0#Twig" expanded="true" />
             <element signature="e#4924#4929#0#Twig" expanded="true" />
-            <element signature="e#5658#5668#0#Twig" expanded="true" />
+            <element signature="e#5252#5264#0#Twig" expanded="true" />
+            <element signature="e#5683#5693#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/about_us.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/contact_us.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0034602077" vertical-offset="322" max-vertical-offset="900">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.34256056" vertical-offset="0" max-vertical-offset="1980">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#13#51#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/StaticPageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39593908" vertical-offset="0" max-vertical-offset="591">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="e#534#584#1#PHP" expanded="true" />
+            <element signature="e#909#927#0#HTML" expanded="true" />
+            <element signature="e#1092#1126#0#HTML" expanded="true" />
+            <element signature="e#1645#1679#0#HTML" expanded="true" />
+            <element signature="e#2016#2075#0#HTML" expanded="true" />
+            <element signature="e#2224#2243#0#HTML" expanded="true" />
+            <element signature="e#2428#2447#0#HTML" expanded="true" />
+            <element signature="e#2559#2618#0#HTML" expanded="true" />
+            <element signature="e#2769#2788#0#HTML" expanded="true" />
+            <element signature="e#2970#2989#0#HTML" expanded="true" />
+            <element signature="e#3101#3160#0#HTML" expanded="true" />
+            <element signature="e#3216#3235#0#HTML" expanded="true" />
+            <element signature="e#3336#3373#0#HTML" expanded="true" />
+            <element signature="e#3485#3544#0#HTML" expanded="true" />
+            <element signature="e#3590#3628#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
