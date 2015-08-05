@@ -237,7 +237,7 @@
         </div>
 
         <div class="back-to-top">
-            <img id="" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/BackToTop.png') }}" >
+            <a href="#top" class="goTop"><img id="" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/BackToTop.png') }}" ></a>
         </div>
 
 
@@ -271,6 +271,17 @@
         <script src="{{ asset('bundles/phenomwafeee/js/owl.carousel.min.js') }}"></script>
 
         <script>
+
+            $(function(){
+                goTop();
+            })
+            function goTop() {
+                $("a[href='#top']").click(function() {
+                    $("html, body").animate({ scrollTop: 0 }, 500);
+                    return false;
+                });
+            }
+
             window.fbAsyncInit = function() {
                 // init the FB JS SDK
                 FB.init({

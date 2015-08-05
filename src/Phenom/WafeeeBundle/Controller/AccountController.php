@@ -74,7 +74,7 @@ class AccountController extends Controller
                 ->add('success', array(
                         'alert' => 'success',
                         'title' => 'Success!',
-                        'message' => 'New word has been added successfully.'
+                        'message' => 'Login success.'
                     )
                 )
             ;
