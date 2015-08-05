@@ -157,16 +157,22 @@
     </table>
     <table name="user" schema="" catalog="wafeeeDB" type="TABLE">
       <column name="id" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="hash" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
       <column name="firstname" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="lastname" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="username" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="avatarName" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="role" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="isActive" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
       <column name="isOnline" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
       <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="facebook_id" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="FK_9474526CA76ED395" table="comment" schema="" catalog="wafeeeDB" columns="user_id"/>
       <exported-key name="FK_58DB7390A76ED395" table="commentVote" schema="" catalog="wafeeeDB" columns="user_id"/>
@@ -175,6 +181,8 @@
       <exported-key name="FK_AC6A4CA2A76ED395" table="shop" schema="" catalog="wafeeeDB" columns="user_id"/>
       <exported-key name="FK_22B6F788A76ED395" table="shopFollow" schema="" catalog="wafeeeDB" columns="user_id"/>
       <exported-key name="FK_24B2E39EA76ED395" table="shopVote" schema="" catalog="wafeeeDB" columns="user_id"/>
+      <index name="UNIQ_8D93D6499BE8FD98" unique="true" columns="facebook_id"/>
+      <index name="UNIQ_8D93D649D1B862B8" unique="true" columns="hash"/>
     </table>
   </data-source>
 </component>

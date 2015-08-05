@@ -69,6 +69,16 @@ class AccountController extends Controller
 
             $this->authenticateUser($user);
 
+            $request->getSession()
+                ->getFlashBag()
+                ->add('success', array(
+                        'alert' => 'success',
+                        'title' => 'Success!',
+                        'message' => 'New word has been added successfully.'
+                    )
+                )
+            ;
+
             return $this->redirect($this->generateUrl('index'));
         }
 
@@ -146,6 +156,16 @@ class AccountController extends Controller
         $token = new UsernamePasswordToken($user, null, $providerKey, $user->getRoles());
 
         $this->container->get('security.context')->setToken($token);
+    }
+
+    /**
+     *
+     * @Route("/resetpass", name="reset_password")
+     *
+     */
+    public function resetAction()
+    {
+        return $this->render('PhenomWafeeeBundle:Authenticate:resetpassword.html.twig');
     }
 
 }
