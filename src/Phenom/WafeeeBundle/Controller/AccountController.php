@@ -147,7 +147,7 @@ class AccountController extends Controller
      */
     public function adminPageAction()
     {
-        return new Response("Admin page");
+        return new Response("Admin Page");
     }
 
     private function authenticateUser(User $user)

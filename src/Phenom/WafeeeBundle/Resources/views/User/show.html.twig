@@ -1,6 +1,6 @@
 {% extends '::base.html.twig' %}
 
-{% block body -%}
+{% block body %}
     <h1>User</h1>
 
     <table class="record_properties">
@@ -59,7 +59,7 @@
         </a>
     </li>
     <li>
-        <a href="{{ path('user_edit', { 'id': entity.id }) }}">
+        <a href="{{ path('user_edit', { 'username': entity.username }) }}">
             Edit
         </a>
     </li>
