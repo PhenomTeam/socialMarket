@@ -2,12 +2,15 @@
 
 namespace Phenom\WafeeeBundle\Controller;
 
+use Phenom\WafeeeBundle\Entity\Shop;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Phenom\WafeeeBundle\Entity\Category;
+use Phenom\WafeeeBundle\Entity\Product;
+use Phenom\WafeeeBundle\Form\ProductType;
 use Phenom\WafeeeBundle\Form\CategoryType;
 
 /**
@@ -42,7 +45,7 @@ class CategoryController extends Controller
      * @Method("POST")
      * @Template("PhenomWafeeeBundle:Category:new.html.twig")
      */
-    public function createAction(Request $request)
+    public function createAction(Request $request, Shop $shopId)
     {
         $category = new Category();
 
@@ -57,6 +60,9 @@ class CategoryController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            $category->setShopId($shopId);
+
             $em->persist($category);
             $em->flush();
 
@@ -235,5 +241,74 @@ class CategoryController extends Controller
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
         ;
+    }
+
+    /**
+     * Displays a form to create a new Product entity.
+     *
+     * @Route("/{id}/add_product", name="add_product")
+     * @Method("GET")
+     *
+     */
+    public function addProductAction($id)
+    {
+        $product = new Product();
+
+        $form = $this->createForm(new ProductType(), $product, array(
+            'action' => $this->generateUrl('add_new_product', array('id' => $id)),
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Create'));
+
+        return $this->render('PhenomWafeeeBundle:Category:add_product.html.twig',
+            array(
+                'product' => $product,
+                'form'   => $form->createView(),
+            )
+        );
+    }
+
+    /**
+     * Creates a new Product entity.
+     *
+     * @Route("/{id}/add_new_product", name="add_new_product")
+     * @Method("POST")
+     *
+     */
+    public function addNewProductAction(Request $request, $id)
+    {
+        $product = new Product();
+
+        $form = $this->createForm(new ProductType(), $product, array(
+            'action' => $this->generateUrl('add_new_product', array('id' => $id)),
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Create'));
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+
+            $product = $form->getData();
+
+            $category = $em->getRepository('PhenomWafeeeBundle:Category')->find($id);
+
+            $category->addProduct($product);
+
+            $em->persist($product);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('product_show', array('id' => $product->getId())));
+        }
+
+        return $this->render('PhenomWafeeeBundle:Category:add_product.html.twig',
+            array(
+                'product' => $product,
+                'form'   => $form->createView(),
+            )
+        );
     }
 }

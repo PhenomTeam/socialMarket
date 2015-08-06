@@ -27,6 +27,11 @@
             Edit
         </a>
     </li>
+    <li>
+        <a href="{{ path('add_product', { 'id': category.id }) }}">
+            Add New Product
+        </a>
+    </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
 {% endblock %}

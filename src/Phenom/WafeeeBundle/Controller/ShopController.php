@@ -2,6 +2,8 @@
 
 namespace Phenom\WafeeeBundle\Controller;
 
+use Phenom\WafeeeBundle\Entity\Category;
+use Phenom\WafeeeBundle\Form\CategoryType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -25,8 +27,9 @@ class ShopController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function showAllAction()
+    public function showAllShopAction()
     {
+//        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $em = $this->getDoctrine()->getManager();
 
         $shops = $em->getRepository('PhenomWafeeeBundle:Shop')->findAll();
@@ -44,7 +47,7 @@ class ShopController extends Controller
      * @Method("POST")
      * @Template("PhenomWafeeeBundle:Shop:new.html.twig")
      */
-    public function createAction(Request $request)
+    public function createShopAction(Request $request)
     {
         $shop = new Shop();
         $form = $this->createForm(new ShopType(), $shop, array(
@@ -78,11 +81,11 @@ class ShopController extends Controller
     /**
      * Displays a form to create a new Shop entity.
      *
-     * @Route("/new", name="shop_new")
+     * @Route("/add_shop", name="add_new_shop")
      * @Method("GET")
      *
      */
-    public function newAction()
+    public function addNewShopAction()
     {
         $shop = new Shop();
         $form = $this->createForm(new ShopType(), $shop, array(
@@ -94,7 +97,7 @@ class ShopController extends Controller
 
         return $this->render('PhenomWafeeeBundle:Shop:new.html.twig',
             array(
-            'entity' => $shop,
+            'shop' => $shop,
             'form'   => $form->createView(),
             )
         );
@@ -107,7 +110,7 @@ class ShopController extends Controller
      * @Method("GET")
      *
      */
-    public function showAction($id)
+    public function showShopAction($id)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -121,8 +124,9 @@ class ShopController extends Controller
 
         return $this->render('PhenomWafeeeBundle:Shop:show.html.twig',
             array(
-            'shop'      => $shop,
-            'delete_form' => $deleteForm->createView(),
+                'id'        => $id,
+                'shop'      => $shop,
+                'delete_form' => $deleteForm->createView(),
             )
         );
     }
@@ -130,11 +134,11 @@ class ShopController extends Controller
     /**
      * Displays a form to edit an existing Shop entity.
      *
-     * @Route("/{id}/edit", name="shop_edit")
+     * @Route("/{id}/shop_edit", name="shop_edit")
      * @Method("GET")
-     * @Template()
+     *
      */
-    public function editAction($id)
+    public function editShopAction($id)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -153,10 +157,12 @@ class ShopController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
 
-        return array(
-            'shop'      => $shop,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+        return $this->render('PhenomWafeeeBundle:Shop:edit.html.twig',
+            array(
+                'shop'      => $shop,
+                'edit_form'   => $editForm->createView(),
+                'delete_form' => $deleteForm->createView(),
+            )
         );
     }
 
@@ -167,7 +173,7 @@ class ShopController extends Controller
      * @Method("PUT")
      * @Template("PhenomWafeeeBundle:Shop:edit.html.twig")
      */
-    public function updateAction(Request $request, $id)
+    public function updateShopAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -206,7 +212,7 @@ class ShopController extends Controller
      * @Route("/{id}", name="shop_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, $id)
+    public function deleteShopAction(Request $request, $id)
     {
         $form = $this->createDeleteForm($id);
         $form->handleRequest($request);
@@ -242,4 +248,69 @@ class ShopController extends Controller
             ->getForm()
         ;
     }
+
+    /**
+     *
+     * @Route("/{id}/add_category", name="add_category")
+     * @Method("GET")
+     *
+     */
+    public function addCategoryAction($id)
+    {
+        $category = new Category();
+        $form = $this->createForm(new CategoryType(), $category, array(
+            'action' => $this->generateUrl('add_new_category', array('id' => $id)),
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Create'));
+
+        return $this->render('PhenomWafeeeBundle:Shop:add_category.html.twig',
+            array(
+                'category' => $category,
+                'form'   => $form->createView(),
+            )
+        );
+    }
+
+    /**
+     *
+     * @Route("/{id}/add_new_category", name="add_new_category")
+     * @Method("POST")
+     *
+     */
+    public function addNewCategoryAction(Request $request, $id)
+    {
+        $category = new Category();
+
+        $form = $this->createForm(new CategoryType(), $category, array(
+            'action' => $this->generateUrl('add_new_category', array('id' => $id)),
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Create'));
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+
+            $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->find($id);
+
+            $category->setShopId($shop);
+
+            $em->persist($category);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('category_show', array('id' => $category->getId())));
+        }
+
+        return $this->render('PhenomWafeeeBundle:Shop:add_category.html.twig',
+            array(
+            'category' => $category,
+            'form'   => $form->createView(),
+            )
+        );
+    }
+
 }

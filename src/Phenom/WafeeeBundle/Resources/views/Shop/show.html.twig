@@ -30,6 +30,9 @@
         <a href="{{ path('shop_edit', { 'id': shop.id }) }}">
             Edit
         </a>
+        <a href="{{ path('add_category', {'id': shop.id}) }}">
+            Create new category
+        </a>
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>

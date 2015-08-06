@@ -13,6 +13,7 @@ use Doctrine\ORM\Mapping\JoinColumn;
  *
  * @ORM\Table(name="shop")
  * @ORM\Entity(repositoryClass="Phenom\WafeeeBundle\Entity\ShopRepository")
+ *
  */
 class Shop extends MediaEntity implements ContentCDNInterface
 {
