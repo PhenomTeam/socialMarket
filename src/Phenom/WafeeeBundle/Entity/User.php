@@ -166,7 +166,7 @@ class User extends MediaEntity implements UserInterface, \Serializable, ContentC
     /**
      * Get firstname
      *
-     * @return string 
+     * @return string
      */
     public function getFirstname()
     {
@@ -531,7 +531,7 @@ class User extends MediaEntity implements UserInterface, \Serializable, ContentC
     public function getKind()
     {
         // TODO: Implement getKind() method.
-        return 'user';
+        return 'userAvatar';
     }
 
 

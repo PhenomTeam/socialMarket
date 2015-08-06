@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Shop</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ shop.name }}</td>
+            </tr>
+            <tr>
+                <th>Avatarname</th>
+                <td><img src="{{ shop.webPath(shop.avatarName) }}"></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ shop.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('shop_list') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('shop_edit', { 'id': shop.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

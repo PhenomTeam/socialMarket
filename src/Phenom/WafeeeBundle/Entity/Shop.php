@@ -4,6 +4,7 @@ namespace Phenom\WafeeeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\JoinColumn;
 
@@ -28,7 +29,7 @@ class Shop extends MediaEntity implements ContentCDNInterface
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=100)
-     * @Assert\Blank()
+     * @Assert\NotBlank()
      *
      */
     private $name;
@@ -50,7 +51,7 @@ class Shop extends MediaEntity implements ContentCDNInterface
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=500)
+     * @ORM\Column(name="description", type="string", length=500, nullable=true)
      */
     private $description;
 
@@ -171,7 +172,7 @@ class Shop extends MediaEntity implements ContentCDNInterface
     public function getKind()
     {
         // TODO: Implement getKind() method.
-        return "shop";
+        return "shopAvatar";
     }
 
     public function uploadFile($adapter)
