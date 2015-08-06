@@ -6,7 +6,6 @@
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
                 <th>Username</th>
@@ -14,32 +13,28 @@
                 <th>Email</th>
                 <th>Role</th>
                 <th>Isactive</th>
-                <th>Isonline</th>
                 <th>Address</th>
-                <th>Password</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for entity in entities %}
+        {% for user in users %}
             <tr>
-                <td>{{ entity.firstname }}</td>
-                <td>{{ entity.lastname }}</td>
-                <td><a href="{{ path('user_show', { 'username': entity.username }) }}">{{ entity.username }}</a></td>
-                <td>{{ entity.phone }}</td>
-                <td>{{ entity.email }}</td>
-                <td>{{ entity.role }}</td>
-                <td>{{ entity.isActive }}</td>
-                <td>{{ entity.isOnline }}</td>
-                <td>{{ entity.address }}</td>
-                <td>{{ entity.password }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td><a href="{{ path('user_show', { 'username': user.username }) }}">{{ user.username }}</a></td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+                <td>{{ user.isActive }}</td>
+                <td>{{ user.address }}</td>
                 <td>
                 <ul>
                     <li>
-                        <a href="{{ path('user_show', { 'username': entity.username }) }}">show</a>
+                        <a href="{{ path('user_show', { 'username': user.username }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('user_edit', { 'username': entity.username }) }}">edit</a>
+                        <a href="{{ path('user_edit', { 'username': user.username }) }}">edit</a>
                     </li>
                 </ul>
                 </td>

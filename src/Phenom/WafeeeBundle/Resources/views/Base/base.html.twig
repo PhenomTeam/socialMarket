@@ -45,6 +45,27 @@
     {% endfor %}
 {% endif %}
 
+    <div class="right-bar clearfix" style="float: left">
+        {#Sign in and sign up    #}
+        <div class="right-bar-box">
+            <img id="right-bar-login" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignInModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignIn.png') }}">
+            <img id="right-bar-signup" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignUpModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignUp.png') }}">
+        </div>
+
+        <hr>
+
+        <div class="right-bar-box">
+            <img id="right-bar-cart" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Cart.png') }}">
+            <img id="right-bar-payment" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Pay.png') }}">
+        </div>
+
+        <div class="back-to-top">
+            <a href="#top" class="goTop"><img id="" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/BackToTop.png') }}" ></a>
+        </div>
+
+
+    </div>
+
     <div class="left-bar clearfix" style="width: 87em; background-color: #f1f1f1; float: left">
         {#  HEADER    #}
         <header class="header">
@@ -222,26 +243,7 @@
 
 
     {#  RIGHT BAR   #}
-    <div class="right-bar clearfix" style="float: left">
-        {#Sign in and sign up    #}
-        <div class="right-bar-box">
-            <img id="right-bar-login" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignInModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignIn.png') }}">
-            <img id="right-bar-signup" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignUpModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignUp.png') }}">
-        </div>
 
-        <hr>
-
-        <div class="right-bar-box">
-            <img id="right-bar-cart" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Cart.png') }}">
-            <img id="right-bar-payment" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Pay.png') }}">
-        </div>
-
-        <div class="back-to-top">
-            <a href="#top" class="goTop"><img id="" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/BackToTop.png') }}" ></a>
-        </div>
-
-
-    </div>
 
 
     <!-- Trigger the modal with a button -->

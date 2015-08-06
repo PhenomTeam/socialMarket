@@ -131,7 +131,7 @@ class User extends MediaEntity implements UserInterface, \Serializable, ContentC
      * @ORM\Column(name="password", type="string")
      * @Assert\Length(
      *      min = 5,
-     *      max = 50,
+     *      max = 500,
      *      minMessage = "Your password must be at least {{ limit }} characters long",
      *      maxMessage = "Your password cannot be longer than {{ limit }} characters"
      * )

@@ -27,13 +27,14 @@ class UserController extends Controller
      */
     public function showAllAction()
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('PhenomWafeeeBundle:User')->findAll();
+        $users = $em->getRepository('PhenomWafeeeBundle:User')->findAll();
 
         return $this->render('PhenomWafeeeBundle:User:index.html.twig',
             array(
-            'entities' => $entities,
+            'users' => $users,
             )
         );
     }
@@ -49,16 +50,16 @@ class UserController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('PhenomWafeeeBundle:User')->findOneBy(array('username' => $username));
+        $user = $em->getRepository('PhenomWafeeeBundle:User')->findOneBy(array('username' => $username));
 
-        if (!$entity) {
+        if (!$user) {
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
         $deleteForm = $this->createDeleteForm($username);
 
         return array(
-            'entity'      => $entity,
+            'user'      => $user,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -68,46 +69,34 @@ class UserController extends Controller
      *
      * @Route("/{username}/edit", name="user_edit")
      * @Method("GET")
-     * @Template()
+     *
      */
     public function editAction($username)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('PhenomWafeeeBundle:User')->findOneBy(array('username' => $username));
+        $user = $em->getRepository('PhenomWafeeeBundle:User')->findOneBy(array('username' => $username));
 
-        if (!$entity) {
+        if (!$user) {
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
-        $editForm = $this->createEditForm($entity);
-        $deleteForm = $this->createDeleteForm($username);
-
-        return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        );
-    }
-
-    /**
-    * Creates a form to edit a User entity.
-    *
-    * @param User $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
-    private function createEditForm(User $entity)
-    {
-        $form = $this->createForm(new UserType(), $entity, array(
-            'action' => $this->generateUrl('user_update', array('username' => $entity->getUsername())),
+        $editForm = $this->createForm(new UserType(), $user, array(
+            'action' => $this->generateUrl('user_update', array('username' => $user->getUsername())),
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        $deleteForm = $this->createDeleteForm($username);
 
-        return $form;
+        return $this->render('PhenomWafeeeBundle:User:edit.html.twig',
+            array(
+            'user'      => $user,
+            'edit_form'   => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+             )
+        );
     }
+
     /**
      * Edits an existing User entity.
      *
@@ -115,28 +104,41 @@ class UserController extends Controller
      * @Method("PUT")
      * @Template("PhenomWafeeeBundle:User:edit.html.twig")
      */
-    public function updateAction(Request $request, $username)
+    public function updateAction($username)
     {
+        $request = $this->get('request');
+
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('PhenomWafeeeBundle:User')->findOneBy(array('username' => $username));
+        $user = $em->getRepository('PhenomWafeeeBundle:User')->findOneBy(array('username' => $username));
 
-        if (!$entity) {
+        if (!$user) {
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
+        $editForm = $this->createForm(new UserType(), $user, array(
+            'action' => $this->generateUrl('user_update', array('username' => $user->getUsername())),
+            'method' => 'PUT',
+        ));
+
         $deleteForm = $this->createDeleteForm($username);
-        $editForm = $this->createEditForm($entity);
         $editForm->handleRequest($request);
 
-        if ($editForm->isValid()) {
+        if ($editForm->isValid())
+        {
+            $user = $editForm->getData();
+
+            $pwd = $user->getPassword();
+            $user->setPassword($pwd);
+
+
             $em->flush();
 
-            return $this->redirect($this->generateUrl('user_edit', array('username' => $username)));
+            return $this->redirect($this->generateUrl('user'));
         }
 
         return array(
-            'entity'      => $entity,
+            'user'      => $user,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );

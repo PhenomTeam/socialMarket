@@ -29,7 +29,7 @@ abstract class MediaEntity extends BaseEntity
     public function getWebPath($file = null)
     {
         $dir = str_replace(DIRECTORY_SEPARATOR, '/', $this->getUploadDir());
-        return null === $file ? null : $dir . '/' . $file;
+        return null === $file ? null : '/' . $dir . '/' . $file;
     }
 
     protected function getUploadRootDir()

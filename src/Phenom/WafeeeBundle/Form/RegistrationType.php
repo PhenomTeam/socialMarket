@@ -13,6 +13,7 @@ class RegistrationType extends AbstractType
         $builder
             ->add('username', 'text', array('attr' => array('placeholder'=>'User Name'), 'label' => false))
             ->add('email', 'text', array('attr' => array('placeholder'=>'Email'), 'label' => false))
+            ->add('avatar_file', 'file')
             ->add('password', 'repeated', array(
                 'type' => 'password',
                 'invalid_message' => 'The password fields must match.',

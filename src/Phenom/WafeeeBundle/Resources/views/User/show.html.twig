@@ -6,48 +6,36 @@
     <table class="record_properties">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
                 <th>Firstname</th>
-                <td>{{ entity.firstname }}</td>
+                <td>{{ user.firstname }}</td>
             </tr>
             <tr>
                 <th>Lastname</th>
-                <td>{{ entity.lastname }}</td>
+                <td>{{ user.lastname }}</td>
             </tr>
             <tr>
                 <th>Username</th>
-                <td>{{ entity.username }}</td>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+                <th>Avatar</th>
+                <td><img src="{{ user.getWebPath(user.avatarname) }}"></td>
             </tr>
             <tr>
                 <th>Phone</th>
-                <td>{{ entity.phone }}</td>
+                <td>{{ user.phone }}</td>
             </tr>
             <tr>
                 <th>Email</th>
-                <td>{{ entity.email }}</td>
+                <td>{{ user.email }}</td>
             </tr>
             <tr>
                 <th>Role</th>
-                <td>{{ entity.role }}</td>
-            </tr>
-            <tr>
-                <th>Isactive</th>
-                <td>{{ entity.isActive }}</td>
-            </tr>
-            <tr>
-                <th>Isonline</th>
-                <td>{{ entity.isOnline }}</td>
+                <td>{{ user.role }}</td>
             </tr>
             <tr>
                 <th>Address</th>
-                <td>{{ entity.address }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ entity.password }}</td>
+                <td>{{ user.address }}</td>
             </tr>
         </tbody>
     </table>
@@ -59,7 +47,7 @@
         </a>
     </li>
     <li>
-        <a href="{{ path('user_edit', { 'username': entity.username }) }}">
+        <a href="{{ path('user_edit', { 'username': user.username }) }}">
             Edit
         </a>
     </li>
