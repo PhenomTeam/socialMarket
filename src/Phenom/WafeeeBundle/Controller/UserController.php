@@ -42,11 +42,11 @@ class UserController extends Controller
     /**
      * Finds and displays a User entity.
      *
-     * @Route("/{username}", name="user_show")
+     * @Route("/{username}", name="user_profile")
      * @Method("GET")
-     * @Template()
+     *
      */
-    public function showAction($username)
+    public function userProfileAction($username)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -56,22 +56,21 @@ class UserController extends Controller
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
-        $deleteForm = $this->createDeleteForm($username);
-
-        return array(
-            'user'      => $user,
-            'delete_form' => $deleteForm->createView(),
+        return $this->render('PhenomWafeeeBundle:User:user_profile.html.twig',
+            array(
+                'user'      => $user,
+            )
         );
     }
 
     /**
      * Displays a form to edit an existing User entity.
      *
-     * @Route("/{username}/edit", name="user_edit")
+     * @Route("/{username}/edit_profile", name="user_edit_profile")
      * @Method("GET")
      *
      */
-    public function editAction($username)
+    public function editUserProfileAction($username)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -81,18 +80,16 @@ class UserController extends Controller
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
+
         $editForm = $this->createForm(new UserType(), $user, array(
-            'action' => $this->generateUrl('user_update', array('username' => $user->getUsername())),
+            'action' => $this->generateUrl('user_update_profile', array('username' => $user->getUsername())),
             'method' => 'PUT',
         ));
-
-        $deleteForm = $this->createDeleteForm($username);
 
         return $this->render('PhenomWafeeeBundle:User:edit.html.twig',
             array(
             'user'      => $user,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
              )
         );
     }
@@ -100,11 +97,11 @@ class UserController extends Controller
     /**
      * Edits an existing User entity.
      *
-     * @Route("/{username}", name="user_update")
+     * @Route("/{username}", name="user_update_profile")
      * @Method("PUT")
      * @Template("PhenomWafeeeBundle:User:edit.html.twig")
      */
-    public function updateAction($username)
+    public function updateUserProfileAction($username)
     {
         $request = $this->get('request');
 
@@ -117,11 +114,10 @@ class UserController extends Controller
         }
 
         $editForm = $this->createForm(new UserType(), $user, array(
-            'action' => $this->generateUrl('user_update', array('username' => $user->getUsername())),
+            'action' => $this->generateUrl('user_update_profile', array('username' => $user->getUsername())),
             'method' => 'PUT',
         ));
 
-        $deleteForm = $this->createDeleteForm($username);
         $editForm->handleRequest($request);
 
         if ($editForm->isValid())
@@ -140,7 +136,6 @@ class UserController extends Controller
         return array(
             'user'      => $user,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         );
     }
     /**

@@ -1,10 +1,17 @@
-{% extends 'PhenomWafeeeBundle:Base:base.html.twig' %}
+{% extends ('PhenomWafeeeBundle:Base:base.html.twig') %}
 
 {% block header %}
     <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/user.profile.page.css') }}">
 {% endblock %}
 
+{% block title %}User Profile{% endblock %}
+
+{% block slider %}
+
+{% endblock %}
+
 {% block javascripts %}
+    {{ parent() }}
     <script>
         $(function(){
             var avatarWidth = $('#avatar').width();
@@ -25,64 +32,68 @@
                         <img id="avatar" src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserAvarta.png') }}">
                     {% endif %}
                 </div>
-                <form class="col-md-7" method="post" action="{{ path('user_update_profile', {'username': app.user.username}) }}">
+                <div class="col-md-7">
                     <div class="sub-info">
                         <b>GENERAL INFORMATION</b>
                         <div>
                             <span>First Name</span>
-                            <span><input type="text" value="{{ app.user.firstname }}" name="firstname"></span>
+                            <span>{{ user.firstname }}</span>
                         </div>
                         <div>
                             <span>Last Name</span>
-                            <span><input type="text" value="{{ app.user.lastname }}" name="lastname"></span>
+                            <span>{{ user.lastname }}</span>
                         </div>
                         <div>
                             <span>UserName</span>
-                            <span><input type="text" value="{{ app.user.username }}" disabled></span>
+                            <span>{{ user.username }}</span>
                         </div>
                         <div>
                             <span>Sex</span>
-                            <span><input type="text" value="{% if app.user.sex is defined %} {{ app.user.sex }} {% endif %}"></span>
+                            <span>Female</span>
                         </div>
                         <div>
                             <span>Date of birth</span>
-                            <span><input type="text"></span>
+                            <span>11-02-1995</span>
+                        </div>
+                        <div>
+                            <span>Status</span>
+                            <span>Buyer</span>
                         </div>
 
                         <b>CONTACT INFORMATION</b>
                         <div>
                             <span>Email</span>
-                            <span><input type="text" value="{{ app.user.email }}" disabled></span>
+                            <span>{{ user.email }}</span>
                         </div>
                         <div>
                             <span>Phone Number</span>
-                            <span><input type="text" name="phone" value="{% if app.user.phone %}{{app.user.phone}}{% endif %}"></span>
+                            <span>{{ user.phone }}</span>
                         </div>
                         <div>
                             <span>Address</span>
-                            <span><input type="text" name="address" value="{% if app.user.address %}{{app.user.address}}{% endif %}"></span>
+                            <span>{{ user.address }}</span>
                         </div>
 
                         <b>ADDITIONAL INFORMATION</b>
                         <div>
                             <span>Website</span>
-                            <span><input type="text"></span>
+                            <span>www.kimngan.com</span>
                         </div>
                         <div>
                             <span>Company</span>
-                            <span><input type="text"></span>
+                            <span>GPAT</span>
                         </div>
                         <div>
                             <span>Job</span>
-                            <span><input type="text"></span>
+                            <span>developer</span>
                         </div>
                         <div>
                             <span>Hobbie</span>
-                            <span><input type="text"></span>
+                            <span>Whateverr</span>
                         </div>
-                        <div class="update"><button type="submit">SAVE</button></div>
+                        <div class="update"><a href="{{ path('user_edit_profile', {'username': user.username}) }}">UPDATE</a></div>
                     </div>
-                </form>
+                </div>
                 <div class="col-md-3">
                     <div class="user-vote">
                         <div class="vote">

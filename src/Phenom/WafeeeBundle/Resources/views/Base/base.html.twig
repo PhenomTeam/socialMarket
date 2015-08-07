@@ -48,19 +48,25 @@
     <div class="right-bar clearfix" style="float: left">
         {#Sign in and sign up    #}
         <div class="right-bar-box">
-            <img id="right-bar-login" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignInModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignIn.png') }}">
-            <img id="right-bar-signup" class="img-rounded" alt="Cinque Terre" width="40" data-toggle="modal" data-target="#SignUpModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignUp.png') }}">
+            {% if not app.user %}
+                <img id="right-bar-login" class="img-rounded" alt="Log In" width="40" data-toggle="modal" data-target="#SignInModal" src="{{ asset('bundles/phenomwafeee/images/Base/SignIn.png') }}">
+                <img id="right-bar-signup" class="img-rounded" alt="Sign Up" width="40" data-toggle="modal" data-target="#SignUpModal" src="{{ asset('bundles/phenomwafeee/images/Base/signup.png') }}">
+            {% else %}
+                <a href="{{ path('user_profile', {'username': app.user.username}) }}"><img id="right-bar-user" class="img-rounded" alt="Setting" width="40" src="{{ asset('bundles/phenomwafeee/images/HomePage/user.png') }}"></a>
+                <a href="#"><img id="right-bar-noti" class="img-rounded" alt="Notification" width="40" src="{{ asset('bundles/phenomwafeee/images/HomePage/notify.png') }}"></a>
+                <a href="{{ path('user_logout') }}"><img id="right-bar-logout" class="img-rounded" alt="Log out" width="40" src="{{ asset('bundles/phenomwafeee/images/HomePage/logout.png') }}"></a>
+            {% endif %}
         </div>
 
         <hr>
 
         <div class="right-bar-box">
-            <img id="right-bar-cart" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Cart.png') }}">
-            <img id="right-bar-payment" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Pay.png') }}">
+            <img id="right-bar-cart" class="img-rounded" alt="Cart" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Cart.png') }}">
+            <img id="right-bar-payment" class="img-rounded" alt="Payment" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/Pay.png') }}">
         </div>
 
         <div class="back-to-top">
-            <a href="#top" class="goTop"><img id="" class="img-rounded" alt="Cinque Terre" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/BackToTop.png') }}" ></a>
+            <a href="#top" class="goTop"><img id="" class="img-rounded" alt="Back to top" width="40" src="{{ asset('bundles/phenomwafeee/images/Base/BackToTop.png') }}" ></a>
         </div>
 
 
@@ -249,17 +255,13 @@
     <!-- Trigger the modal with a button -->
 
     {% block login_form %}
-        {% if app.user %}
-            fuck
-        {% else %}
+        {% if not app.user %}
             {{ render(controller('PhenomWafeeeBundle:Account:login')) }}
         {% endif %}
     {% endblock %}
 
     {% block sign_up_form %}
-        {% if app.user %}
-            fuck
-        {% else %}
+        {% if not app.user %}
             {{ render(controller('PhenomWafeeeBundle:Account:create')) }}
         {% endif %}
     {% endblock %}

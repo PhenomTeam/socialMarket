@@ -531,7 +531,7 @@ class User extends MediaEntity implements UserInterface, \Serializable, ContentC
     public function getKind()
     {
         // TODO: Implement getKind() method.
-        return 'userAvatar';
+        return 'user';
     }
 
 

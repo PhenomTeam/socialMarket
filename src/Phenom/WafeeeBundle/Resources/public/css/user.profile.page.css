@@ -1,62 +1,132 @@
-.user-avarta {
-    padding-top: 2em;
-    padding-left: 2em;
-    width: 25em;
-    float: left;
+.container {
+    width: 100%;
 }
-
-.user-info {
-    float: left;
-    width: 32em;
-    padding-top: 2em;
+.container .profile .info {
+    display: inline-block;
+    width: 100%;
+    position: relative;
 }
-
-.wrap-user-info-title {
-    width: 32em;
-    float: left;
-    padding-left: 1em;
-    padding-top: 1em;
+.container .profile .info .col-md-2:first-child {
+    padding: 0;
+    text-align: center;
+    margin-top: 45px;
 }
-
-.user-info-title {
-    background-color: #808080;
-    float: left;
+.container .profile .info .col-md-2:first-child img {
+    width: 100%;
+    border-radius: 50%;
 }
-
-.info {
+.container .profile .info .col-md-2:first-child a {
+    display: inline-block;
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+.container .profile .info .col-md-7 {
+    padding: 0;
+    margin-top: 45px;
+    margin-bottom: 33px;
+}
+.container .profile .info .col-md-7 .sub-info {
+    background-color: #ced3d3;
+}
+.container .profile .info .col-md-7 .sub-info > b:first-child {
+    display: inline-block;
+    width: 35%;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    background-color: #878b8b;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.container .profile .info .col-md-7 .sub-info > b:not(:first-child) {
+    margin-top: 10px;
+    display: inline-block;
+    width: 35%;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    background-color: #878b8b;
+    margin-left: 25px;
+}
+.container .profile .info .col-md-7 .sub-info > div.description {
+    margin: 10px 25px 0;
+}
+.container .profile .info .col-md-7 .sub-info > div.description p {
+    text-align: justify;
+}
+.container .profile .info .col-md-7 .sub-info > div.description textarea {
+    background-color: #8f9393;
+    width: 100%;
+    text-align: justify;
+    min-height: 100px;
+    color: aliceblue;
+    padding: 4px 10px;
+}
+.container .profile .info .col-md-7 .sub-info > div > span:first-child {
+    width: 35%;
+    display: inline-block;
+    margin-right: 10px;
     text-align: right;
-    width: 10em;
+    margin-left: 25px;
+    font-size: 13px;
     float: left;
 }
-
-.data-info {
-    padding-left: 2em;
-    text-align: left;
-    width: 20em;
-    float: right;
+.container .profile .info .col-md-7 .sub-info > div > span:last-child {
+    font-size: 13px;
+    width: 55%;
+    display: inline-block;
 }
-
-#update-btn {
-    margin-left: 15em;
-    margin-top: 2em;
-    background-color: #3f3f3f;
+.container .profile .info .col-md-7 .sub-info > div > span:last-child input[type="text"] {
+    width: 100%;
+    background-color: #8f9393;
+    color: #FFFFFF;
 }
-
-.right-direction {
-    width: 28em;
+.container .profile .info .col-md-7 .sub-info > div > span:last-child input[type="text"]:disabled {
+    background-color: darkkhaki;
+}
+.container .profile .info .col-md-7 .sub-info .update > button,
+.container .profile .info .col-md-7 .sub-info .update > a {
+    display: inline-block;
+    padding: 3px 11px;
+    font-size: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    left: 100%;
+    transform: translateX(-80%);
+}
+.container .profile .info .col-md-3 {
+    padding: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.container .profile .info .col-md-3 .user-vote {
+    display: inline-block;
+    width: 85%;
+}
+.container .profile .info .col-md-3 .user-vote .vote {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+}
+.container .profile .info .col-md-3 .user-vote .vote > img {
     float: left;
 }
-
-#user-vote {
-    margin-top: 1em;
-    margin-left: 15em;
-    margin-bottom: 34em;
+.container .profile .info .col-md-3 .user-vote .vote .vote-index {
+    display: inline-block;
 }
-
-.find-me-on {
-    padding-left: 5em;
+.container .profile .info .col-md-3 .user-vote .vote .vote-index span:first-child {
+    font-size: 25px;
 }
-
-.social-logo {
-    margin-left: 1em;
+.container .profile .info .col-md-3 .follow {
+    position: absolute;
+    top: 100%;
+    margin-left: 15px;
+    transform: translateY(-255%);
 }
