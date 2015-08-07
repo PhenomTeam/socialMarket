@@ -12,4 +12,14 @@ use Doctrine\ORM\EntityRepository;
  */
 class CategoryRepository extends EntityRepository
 {
+    public function findShop($id) {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery(
+            'SELECT s.id
+            FROM PhenomWafeeeBundle:Category c
+            JOIN c.shop_id s
+            WHERE c.id='.$id
+        );
+        return $query->getOneOrNullResult();
+    }
 }

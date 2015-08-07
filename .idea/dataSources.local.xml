@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - @localhostWafeeeDB" uuid="e54f3741-3248-49df-a8e1-4584f3cfe50e">
+    <data-source name="MySQL - wafeeeDB@localhost" uuid="ec9140bd-4e77-47fe-a1ac-46877156c97c">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <schema-pattern>wafeeeDB.*</schema-pattern>

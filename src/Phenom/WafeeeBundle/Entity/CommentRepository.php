@@ -12,4 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class CommentRepository extends EntityRepository
 {
+    public function getCommentsByProductId($productId, $order = 'DESC') {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery(
+            'SELECT c.content, c.createDate, u.avatarPhoto, u.username
+            FROM PhenomWafeeeBundle:Comment c
+            JOIN c.user_id u
+            WHERE c.product_id='.$productId.
+            'ORDER BY c.id '.$order
+        );
+        return $query->getResult();
+    }
 }

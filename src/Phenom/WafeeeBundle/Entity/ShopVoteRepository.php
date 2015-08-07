@@ -12,4 +12,20 @@ use Doctrine\ORM\EntityRepository;
  */
 class ShopVoteRepository extends EntityRepository
 {
+    public function checkUserRateShop($idU, $idS) {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery("SELECT s FROM PhenomWafeeeBundle:ShopVote s WHERE s.user_id='".$idU."' AND s.shop_id='".$idS."'");
+        return $query->getOneOrNullResult();
+    }
+
+    public function checkShopRated($idS) {
+        $em = $this->getEntityManager();
+        $repository = $em->getRepository('PhenomWafeeeBundle:ShopVote');
+        $query = $repository->createQueryBuilder('s')
+            ->where('s.shop_id = :idS')
+            ->setParameter('idS',$idS)
+            ->orderBy('s.id','DESC')
+            ->getQuery();
+        return $query->getResult();
+    }
 }

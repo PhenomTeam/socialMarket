@@ -12,4 +12,27 @@ use Doctrine\ORM\EntityRepository;
  */
 class ProductRepository extends EntityRepository
 {
+    public function findAllProductByName($order = 'ASC')
+    {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery('SELECT p FROM PhenomWafeeeBundle:Product p ORDER BY p.name '.$order);
+        return $query->getResult();
+    }
+
+    public function findProductById($id) {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery('SELECT p FROM PhenomWafeeeBundle:Product p WHERE p.id='.$id);
+        return $query->getOneOrNullResult();
+    }
+
+    public function findCategoryId($id) {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery(
+            'SELECT c.id
+            FROM PhenomWafeeeBundle:Product p
+            JOIN PhenomWafeeeBundle:Category c
+            WHERE p.id='.$id
+        );
+        return $query->getOneOrNullResult();
+    }
 }

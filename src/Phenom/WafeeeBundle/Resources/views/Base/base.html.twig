@@ -54,6 +54,7 @@
             {% else %}
                 <a href="{{ path('user_profile', {'username': app.user.username}) }}"><img id="right-bar-user" class="img-rounded" alt="Setting" width="40" src="{{ asset('bundles/phenomwafeee/images/HomePage/user.png') }}"></a>
                 <a href="#"><img id="right-bar-noti" class="img-rounded" alt="Notification" width="40" src="{{ asset('bundles/phenomwafeee/images/HomePage/notify.png') }}"></a>
+                <a href="{{ path('add_new_shop') }}"><img id="right-bar-add-product" class="img-rounded" alt="Add Product" width="40" src="{{ asset('bundles/phenomwafeee/images/ShopPage/shop3.png') }}"></a>
                 <a href="{{ path('user_logout') }}"><img id="right-bar-logout" class="img-rounded" alt="Log out" width="40" src="{{ asset('bundles/phenomwafeee/images/HomePage/logout.png') }}"></a>
             {% endif %}
         </div>

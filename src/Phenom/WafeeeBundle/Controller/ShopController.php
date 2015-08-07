@@ -10,7 +10,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Phenom\WafeeeBundle\Entity\Shop;
+use Phenom\WafeeeBundle\Entity\ShopFollow;
+use Phenom\WafeeeBundle\Entity\ShopVote;
+use Phenom\WafeeeBundle\Entity\ShopVotePoint;
+use Phenom\WafeeeBundle\Entity\Notification;
 use Phenom\WafeeeBundle\Form\ShopType;
+
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Shop controller.
@@ -106,29 +112,138 @@ class ShopController extends Controller
     /**
      * Finds and displays a Shop entity.
      *
-     * @Route("/{id}", name="shop_show")
+     * @Route("/{id}/info", name="shop_show")
      * @Method("GET")
      *
      */
     public function showShopAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-
-        $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->find($id);
-
-        if (!$shop) {
-            throw $this->createNotFoundException('Unable to find Shop entity.');
+        $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->getShopById($id);
+        $user = $shop->getUserId();
+        $currentUser = null;
+        $checkFollow = null;
+        $checkOwnerShop = 0;
+        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')){// check user signed in
+            $currentUser = $this->getUser();
+            $checkFollow = $em->getRepository('PhenomWafeeeBundle:ShopFollow')->checkIfShopFollowedByUser($currentUser->getId(), $id);
+            $checkOwnerShop = $em->getRepository('PhenomWafeeeBundle:Shop')->checkOwnerShop($currentUser->getId(), $id);
         }
-
-        $deleteForm = $this->createDeleteForm($id);
-
         return $this->render('PhenomWafeeeBundle:Shop:show.html.twig',
             array(
-                'id'        => $id,
-                'shop'      => $shop,
-                'delete_form' => $deleteForm->createView(),
+                'shop' => $shop,
+                'user'=>$user,
+                'currentUser'=>$currentUser,
+                'checkFollow'=>$checkFollow,
+                'checkOwnerShop'=>$checkOwnerShop
             )
         );
+    }
+
+
+    /**
+     * @Route("/followshop", name="followshop")
+     */
+    public function followShopAction(Request $request)
+    {
+        if($request->isXmlHttpRequest()) {
+            if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+                $id = $request->request->get('id');
+                $user = $this->getUser();
+                $em = $this->getDoctrine()->getManager();
+                $checkFollow = $em->getRepository('PhenomWafeeeBundle:ShopFollow')->checkIfShopFollowedByUser($user->getId(), $id);
+                if(!$checkFollow) {
+                    $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->getShopById($id);
+                    $follow = new ShopFollow();
+                    $follow->setUserId($user);
+                    $follow->setShopId($shop);
+                    $em->persist($follow);
+                    $em->flush();
+
+                    $contentNotification = $user->getUsername().' has followed your shop';
+                    $notification = new Notification();
+                    $notification->setUserId($user);
+                    $notification->setShopId($shop);
+                    $notification->setContent($contentNotification);
+
+                    $em->persist($notification);
+                    $em->flush();
+                }
+                return new JsonResponse(array('success'=>true));
+            }
+        }
+    }
+
+    /**
+     * @Route("/unfollowshop", name="unfollowshop")
+     */
+    public function unFollowShopAction(Request $request)
+    {
+        if($request->isXmlHttpRequest()) {
+            if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+                $em = $this->getDoctrine()->getManager();
+                $idS = $request->request->get('id');
+                $user = $this->getUser();
+                $shopFollow = $em->getRepository('PhenomWafeeeBundle:ShopFollow')->findOneBy(array('shop_id'=>$idS, 'user_id'=>$user->getId()));
+                if($shopFollow != null) {
+                    $em->remove($shopFollow);
+                    $em->flush();
+                }
+                return new JsonResponse(array('success'=>true));
+            }
+        }
+    }
+
+    /**
+     * @Route("/rateshop", name="rateshop")
+     */
+    public function rateShopAction(Request $request)
+    {
+        if($request->isXmlHttpRequest()) {
+            if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+                $em = $this->getDoctrine()->getManager();
+                $idS = $request->request->get('id');
+                $point = $request->request->get('point');
+                $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->find($idS);
+                $user = $this->getUser();
+                $success = false;
+                // check user rated this shop or not
+                $checkUserRate = $em->getRepository('PhenomWafeeeBundle:ShopVote')->checkUserRateShop($user->getId(), $idS);
+
+                if($checkUserRate == null) {// if user has not rated this shop
+                    // check shop has been rated
+                    $checkShopRated = $em->getRepository('PhenomWafeeeBundle:ShopVote')->checkShopRated($idS);
+                    $shopRated = false;
+                    if($checkShopRated) {// if shop has been rated
+                        $shopVotePoint = $em->getRepository('PhenomWafeeeBundle:ShopVotePoint')->find($checkShopRated[0]->getShopvoteId()->getId());
+                        $numOfVotes = $shopVotePoint->getNumofvotes() + 1;
+                        $votePoint = $shopVotePoint->getVotepoint() + $point;
+                    } else {// if shop has not been rated
+                        $shopVotePoint = new ShopVotePoint();
+                        $numOfVotes = 1;
+                        $votePoint = $point;
+                    }
+
+                    $shopVotePoint->setNumofvotes($numOfVotes);
+                    $shopVotePoint->setVotepoint($votePoint);
+                    $em->persist($shopVotePoint);
+                    $em->flush();
+
+                    $shopVote = new ShopVote();
+                    $shopVote->setShopId($shop);
+                    $shopVote->setUserId($user);
+                    $shopVote->setShopvoteId($shopVotePoint);
+                    $em->persist($shopVote);
+                    $em->flush();
+                    $success = true;
+                }
+                if($success) {
+//                    $numvotes = $shopVotePoint->getNumofvotes();
+//                    $votepoint = $shopVotePoint->getVotepoint();
+                }
+                return new JsonResponse(array('success'=>$success));
+            }
+        }
     }
 
     /**
@@ -144,24 +259,16 @@ class ShopController extends Controller
 
         $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->find($id);
 
+        $user = $shop->getUserId();
+
         if (!$shop) {
             throw $this->createNotFoundException('Unable to find Shop entity.');
         }
 
-        $editForm = $this->createForm(new ShopType(), $shop, array(
-            'action' => $this->generateUrl('shop_update', array('id' => $shop->getId())),
-            'method' => 'PUT',
-        ));
-
-        $editForm->add('submit', 'submit', array('label' => 'Update'));
-
-        $deleteForm = $this->createDeleteForm($id);
-
         return $this->render('PhenomWafeeeBundle:Shop:edit.html.twig',
             array(
                 'shop'      => $shop,
-                'edit_form'   => $editForm->createView(),
-                'delete_form' => $deleteForm->createView(),
+                'user'      => $user,
             )
         );
     }
@@ -170,40 +277,31 @@ class ShopController extends Controller
      * Edits an existing Shop entity.
      *
      * @Route("/{id}", name="shop_update")
-     * @Method("PUT")
-     * @Template("PhenomWafeeeBundle:Shop:edit.html.twig")
+     * @Method("POST")
+     *
      */
     public function updateShopAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
-
         $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->find($id);
+        $user = $shop->getUserId();
 
-        if (!$shop) {
-            throw $this->createNotFoundException('Unable to find Shop entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-
-        $editForm = $this->createForm(new ShopType(), $shop, array(
-            'action' => $this->generateUrl('shop_update', array('id' => $shop->getId())),
-            'method' => 'PUT',
-        ));
-
-        $editForm->add('submit', 'submit', array('label' => 'Update'));
-
-        $editForm->handleRequest($request);
-
-        if ($editForm->isValid()) {
+        if($request->getMethod() == 'POST') {
+            $shopname = $request->request->get('shopname');
+            $description = $request->request->get('description');
+            $shop->setName($shopname);
+            $shop->setDescription($description);
+            $em->persist($shop);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('shop_edit', array('id' => $id)));
+            return $this->redirectToRoute('shop_show', array('id'=>$id));
         }
 
-        return array(
-            'shop'      => $shop,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+        return $this->render('PhenomWafeeeBundle:Shop:edit.html.twig',
+            array(
+                'shop'=>$shop,
+                'user'=>$user,
+            )
         );
     }
     /**

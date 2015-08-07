@@ -1,39 +1,205 @@
-{% extends '::base.html.twig' %}
+{% extends 'PhenomWafeeeBundle:Base:base.html.twig' %}
 
-{% block body %}
-    <h1>Shop</h1>
+{% block header %}
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/shopinfo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/rating.css') }}">
+{% endblock %}
 
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <th>Name</th>
-                <td>{{ shop.name }}</td>
-            </tr>
-            <tr>
-                <th>Avatarname</th>
-                <td><img src="{{ shop.webPath(shop.avatarName) }}"></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ shop.description }}</td>
-            </tr>
-        </tbody>
-    </table>
+{% block content %}
+    <div class="container">
+        <div class="profile">
+            <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/InfoField.png') }}">
+            <div class="info">
+                <div class="col-md-2">
+                    <img id="avatar" src="{{ shop.getWebPath(shop.avatarName) }}">
+                    <div>
+                        {% if checkOwnerShop == 0 %}
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                {% if checkFollow %}
+                                    <a href="#" id="unfollow" class="followShop" onclick="unFollowShop(); return false;">UNFOLLOW</a>
+                                {% else %}
+                                    <a href="#" id="follow" class="followShop" onclick="followShop(); return false;">FOLLOW</a>
+                                {% endif %}
+                                <a href="#">MESSAGE</a>
+                            {% else %}
+                                <span class="followShop" title="Sign in to Follow">FOLLOW</span>
+                                <span class="followShop" title="Sign in to Send Message">MESSAGE</span>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    {% if checkOwnerShop == 0 %}
+                        <div class="rating">
+                            <strong class="label-rating">Let's rate this shop</strong>
+                            <div class="rate-ex2-cnt">
+                                <div id="1" class="rate-btn-1 rate-btn"></div>
+                                <div id="2" class="rate-btn-2 rate-btn"></div>
+                                <div id="3" class="rate-btn-3 rate-btn"></div>
+                                <div id="4" class="rate-btn-4 rate-btn"></div>
+                                <div id="5" class="rate-btn-5 rate-btn"></div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-7">
+                    <div class="sub-info">
+                        <b>GENERAL INFORMATION</b>
+                        <div>
+                            <span>Shop</span>
+                            <span>{{ shop.name }}</span>
+                        </div>
+                        <div>
+                            <span>Shop's Owner</span>
+                            <span>{{ user.username }}</span>
+                        </div>
+                        <div>
+                            <span>Activity Duration</span>
+                            <span>{{ 2 }} years</span>
+                        </div>
+                        <div>
+                            <span>Special In</span>
+                            <span>Fashion</span>
+                        </div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('shop_list') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('shop_edit', { 'id': shop.id }) }}">
-            Edit
-        </a>
-        <a href="{{ path('add_category', {'id': shop.id}) }}">
-            Create new category
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+                        <b>CONTACT INFORMATION</b>
+                        <div>
+                            <span>Email</span>
+                            <span>{{ user.email }}</span>
+                        </div>
+                        <div>
+                            <span>Phone number</span>
+                            <span>{{ user.phone }}</span>
+                        </div>
+                        <div>
+                            <span>Address</span>
+                            <span>{{ user.address }}</span>
+                        </div>
+                        <div>
+                            <span>Website</span>
+                            <span>www.kimngan.com</span>
+                        </div>
+
+                        <b>DESCRIPTION</b>
+                        <div class="description">
+                            <p>{{ shop.description }}</p>
+                        </div>
+                        {% if currentUser and currentUser.id == user.id %}
+                            <div class="update"><a href="{{ path('shop_edit', {'id':shop.id} ) }}">UPDATE</a></div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="user-vote">
+                        <div class="vote">
+                            <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                            <div class="vote-index">
+                                <span>70%</span><br>
+                                <span>999.999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="follow">
+                        <span>Find me on:</span>
+                        <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/Facebook.png') }}">
+                        <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/Google-plus.png') }}">
+                        <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/Twitter.png') }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/phenomwafeee/js/star-rating.min.js') }}"></script>
+    <script type="text/javascript">
+        $(function(){
+            var avatarWidth = $('#avatar').width();
+            $('#avatar').height(avatarWidth);
+//            followShop();
+//            unFollowShop();
+            rateShop();
+        });
+        // Follow Shop
+        function followShop() {
+            var thisElement = $('#follow');
+//            e.preventDefault();
+            $.ajax({
+                method: "POST",
+                dataType: "json",
+                url: "{{ path('followshop') }}",
+                data: { id: {{ shop.id }} },
+                success: function(data) {
+                    if(data.success) {
+                        thisElement.text('UNFOLLOW');
+                        thisElement.attr('id','unfollow');
+                        thisElement.attr('onclick','unFollowShop(); return false;')
+                    }
+                },
+                error: function() {
+                    console.log('Some problems have happened');
+                }
+            });
+
+        }
+        // Unfollow Shop
+        function unFollowShop() {
+            var thisElement = $('#unfollow');
+//            e.preventDefault();
+            $.ajax({
+                method: "POST",
+                dataType: "json",
+                url: "{{ path('unfollowshop') }}",
+                data: {id: {{ shop.id }} },
+                success: function(data) {
+                    if(data.success) {
+                        thisElement.text('FOLLOW');
+                        thisElement.attr('id','follow');
+                        thisElement.attr('onclick','followShop(); return false;')
+                    }
+                },
+                error: function() {
+                    console.log('Fix your backend error!');
+                }
+            });
+
+        }
+        // Rate Shop
+        function rateShop() {
+            $('.rate-btn').hover(
+                    function(){
+                        $('.rate-btn').removeClass('rate-btn-hover');
+                        var therate = $(this).attr('id');
+                        for (var i = therate; i >= 1; i--) {
+                            $('.rate-btn-'+i).addClass('rate-btn-hover');
+                        };
+                    },
+                    function(){
+                        $('.rate-btn').removeClass('rate-btn-hover');
+                    }
+            );
+
+            $('.rate-btn').click(function(){
+                var therate = $(this).attr('id');
+                $('.rate-btn').removeClass('rate-btn-active');
+                for (var i = therate; i >= 1; i--) {
+                    $('.rate-btn-'+i).addClass('rate-btn-active');
+                };
+                $.ajax({
+                    type : "POST",
+                    dataType: "json",
+                    url : "{{ path('rateshop') }}",
+                    data: {id: {{ shop.id }}, point: therate },
+                    success:function(data) {
+                        if(data.success) {
+                        }
+                    },
+                    error: function() {
+                        console.log('Fix your backend error!');
+                    }
+                });
+
+            });
+        }
+    </script>
 {% endblock %}

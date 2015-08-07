@@ -24,14 +24,6 @@ class ShopVote
     private $id;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="votePoint", type="integer")
-     */
-    private $votePoint;
-
-
-    /**
      * @ManyToOne(targetEntity="Shop")
      * @JoinColumn(name="shop_id", referencedColumnName="id", onDelete="CASCADE")
      **/
@@ -42,6 +34,12 @@ class ShopVote
      * @JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $user_id;
+
+    /**
+     * @ManyToOne(targetEntity="ShopVotePoint")
+     * @JoinColumn(name="shopvote_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $shopvote_id;
 
 
     /**

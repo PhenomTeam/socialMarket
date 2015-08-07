@@ -12,4 +12,23 @@ use Doctrine\ORM\EntityRepository;
  */
 class ShopRepository extends EntityRepository
 {
+    public function getAllShops($order = 'DESC')
+    {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery('SELECT s FROM PhenomWafeeeBundle:Shop s ORDER BY s.id '.$order);
+        return $query->getResult();
+    }
+
+    public function getShopById($id)
+    {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery('SELECT s FROM PhenomWafeeeBundle:Shop s WHERE s.id='.$id);
+        return $query->getOneOrNullResult();
+    }
+
+    public function checkOwnerShop($user, $idS) {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery("SELECT s FROM PhenomWafeeeBundle:Shop s WHERE s.id='".$idS."' AND s.user_id='".$user."'");
+        return count($query->getOneOrNullResult());
+    }
 }

@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+}
+.container .profile .info {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.container .profile .info .col-md-2 {
+  padding: 0;
+  text-align: center;
+  margin-top: 45px;
+}
+.container .profile .info .col-md-2 img {
+  width: 100%;
+  border-radius: 50%;
+}
+.container .profile .info .col-md-2 a,
+.container .profile .info .col-md-2 .followShop {
+  display: inline-block;
+  padding: 3px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+}
+.container .profile .info .col-md-2.avatar .changeAvatar {
+  display: inline-block;
+  width: 100%;
+}
+.container .profile .info .col-md-2.avatar .changeAvatar form {
+  margin-top: 10px;
+}
+.container .profile .info .col-md-2.avatar .changeAvatar form input[type="file"] {
+  display: none;
+}
+.container .profile .info .col-md-2.avatar .changeAvatar form label {
+  display: block;
+  width: 60%;
+  height: 40px;
+  border: 3px dashed;
+  margin: 0 auto;
+}
+.container .profile .info .col-md-2.avatar .changeAvatar form label:hover {
+  cursor: pointer;
+}
+.container .profile .info .col-md-7 {
+  padding: 0;
+  margin-top: 45px;
+  margin-bottom: 33px;
+}
+.container .profile .info .col-md-7 .sub-info {
+  background-color: #ced3d3;
+}
+.container .profile .info .col-md-7 .sub-info > b {
+  display: inline-block;
+  width: 35%;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-align: center;
+  background-color: #878b8b;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.container .profile .info .col-md-7 .sub-info > b:first-child {
+  margin-top: 20px;
+}
+.container .profile .info .col-md-7 .sub-info > div.description {
+  margin: 10px 25px 0;
+}
+.container .profile .info .col-md-7 .sub-info > div.description p {
+  text-align: justify;
+}
+.container .profile .info .col-md-7 .sub-info > div.description textarea {
+  background-color: #8f9393;
+  width: 100%;
+  text-align: justify;
+  min-height: 100px;
+  color: aliceblue;
+  padding: 4px 10px;
+}
+.container .profile .info .col-md-7 .sub-info > div > span:first-child {
+  width: 35%;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: right;
+  margin-left: 25px;
+  font-size: 13px;
+  float: left;
+}
+.container .profile .info .col-md-7 .sub-info > div > span:last-child {
+  font-size: 13px;
+  width: 55%;
+  display: inline-block;
+}
+.container .profile .info .col-md-7 .sub-info > div > span:last-child input[type="text"] {
+  width: 100%;
+  background-color: #8f9393;
+  color: #FFFFFF;
+  height: 25px;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+.container .profile .info .col-md-7 .sub-info > div > span:last-child input[type="text"]:disabled {
+  background-color: darkkhaki;
+}
+.container .profile .info .col-md-7 .sub-info > div > span:last-child input[type="text"]:focus {
+  border-color: black;
+}
+.container .profile .info .col-md-7 .sub-info .update > button,
+.container .profile .info .col-md-7 .sub-info .update > a {
+  display: inline-block;
+  padding: 3px 11px;
+  font-size: 15px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  left: 100%;
+  transform: translateX(-80%);
+}
+.container .profile .info .col-md-3 {
+  padding: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.container .profile .info .col-md-3 .user-vote {
+  display: inline-block;
+  width: 85%;
+}
+.container .profile .info .col-md-3 .user-vote .vote {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+}
+.container .profile .info .col-md-3 .user-vote .vote > img {
+  float: left;
+}
+.container .profile .info .col-md-3 .user-vote .vote .vote-index {
+  display: inline-block;
+}
+.container .profile .info .col-md-3 .user-vote .vote .vote-index span:first-child {
+  font-size: 25px;
+}
+.container .profile .info .col-md-3 .follow {
+  position: absolute;
+  top: 100%;
+  margin-left: 15px;
+  transform: translateY(-255%);
+}

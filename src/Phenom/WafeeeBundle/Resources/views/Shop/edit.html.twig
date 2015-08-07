@@ -1,16 +1,114 @@
-{% extends '::base.html.twig' %}
+{% extends 'PhenomWafeeeBundle:Base:base.html.twig' %}
 
-{% block body %}
-    <h1>Shop edit</h1>
+{% block content %}
+    <div class="container">
+        <div class="profile">
+            <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/ProfileField.png') }}">
+            <div class="info">
+                <div class="col-md-2 avatar">
+                    <img id="avatar" src="{{ shop.getWebPath(shop.avatarName) }}">
+                    <div>
+                        <a href="#" id="change-avatar">CHANGE AVATAR</a>
+                    </div>
+                </div>
+                <form class="col-md-7" method="post" action="{{ path('shop_update', {'id':shop.id} ) }}">
+                    <div class="sub-info">
+                        <b>GENERAL INFORMATION</b>
+                        <div>
+                            <span>Shop</span>
+                            <span><input type="text" value="{{shop.name}}" name="shopname"></span>
+                        </div>
+                        <div>
+                            <span>Shop's Owner</span>
+                            <span><input type="text" value="{{user.username}}" name="ownername" disabled></span>
+                        </div>
+                        <div>
+                            <span>Activity Duration</span>
+                            <span><input type="text" value="{{2}}" disabled></span>
+                        </div>
+                        <div>
+                            <span>Special In</span>
+                            <span><input type="text" value="Fashion"></span>
+                        </div>
 
-    {{ form(edit_form) }}
+                        <b>CONTACT INFORMATION</b>
+                        <div>
+                            <span>Email</span>
+                            <span><input type="text" value="{{user.email}}" disabled></span>
+                        </div>
+                        <div>
+                            <span>Phone Number</span>
+                            <span><input type="text" name="phone" value="{% if user.phone %}{{user.phone}}{% endif %}"></span>
+                        </div>
+                        <div>
+                            <span>Address</span>
+                            <span><input type="text" name="address" value="{% if user.address %}{{user.address}}{% endif %}"></span>
+                        </div>
+                        <div>
+                            <span>Website</span>
+                            <span><input type="text" name="website" value="{% if user.address %}kimngan.com{% endif %}"></span>
+                        </div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('shop_list') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+                        <b>DESCRIPTION</b>
+                        <div class="description">
+                            <textarea name="description">{{shop.description}}</textarea>
+                        </div>
+
+                        <div class="update"><button type="submit">SAVE</button></div>
+                    </div>
+                </form>
+                <div class="col-md-3">
+                    <div class="user-vote">
+                        <div class="vote">
+                            <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/Vote.png') }}">
+                            <div class="vote-index">
+                                <span>70%</span><br>
+                                <span>999.999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="follow">
+                        <span>Find me on:</span>
+                        <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/Facebook.png') }}">
+                        <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/Google-plus.png') }}">
+                        <img src="{{ asset('bundles/phenomwafeee/images/ShopInfoPage/Twitter.png') }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/shopinfo.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $(function() {
+            $('textarea').height($('textarea').prop('scrollHeight'));
+            var avatarWidth = $('#avatar').width();
+            $('#avatar').height(avatarWidth);
+            changeAvatar();
+        });
+        function changeAvatar() {
+            $('#change-avatar').click(function(e){
+                e.preventDefault();
+                var divChangeAvatar = $('<div>').addClass('changeAvatar');
+                var formChange = $('<form>');
+                {#formChange.attr('action', "{{ path('changeshopavatar', {'id':shop.id}) }}");#}
+                formChange.attr('method', 'post');
+                formChange.attr('enctype', 'multipart/form-data');
+                var browseImage = $('<input type="file" name="avatar" id="browseAvatar">');
+                var labelBrowse = $('<label for="browseAvatar">').text('Upload');
+                var submit = $('<input type="submit" value="Change">');
+                formChange.append(browseImage);
+                formChange.append(labelBrowse);
+                formChange.append(submit);
+                divChangeAvatar.append(formChange);
+                $('.avatar').append(divChangeAvatar);
+            });
+        }
+    </script>
 {% endblock %}

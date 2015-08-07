@@ -30,7 +30,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - @localhostWafeeeDB" />
+        <option name="myItemId" value="MySQL - wafeeeDB@localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
@@ -45,140 +45,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user_profile.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/User/user_profile.html.twig">
+      <file leaf-file-name="ShopController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/ShopController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-56.0" vertical-offset="324" max-vertical-offset="2196">
-              <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="7560">
+              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
               <folding>
-                <element signature="e#13#51#0#Twig" expanded="false" />
+                <element signature="e#50#90#0#PHP" expanded="true" />
+                <element signature="e#1210#1246#0#PHP" expanded="true" />
+                <element signature="e#3876#3916#0#PHP" expanded="true" />
+                <element signature="e#10288#10299#0#PHP" expanded="true" />
+                <element signature="e#10360#10400#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig">
+      <file leaf-file-name="ShopVotePoint.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVotePoint.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-204.66667" vertical-offset="0" max-vertical-offset="6012">
-              <caret line="307" column="33" selection-start-line="307" selection-start-column="33" selection-end-line="307" selection-end-column="33" />
+            <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="1800">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.page.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/category.page.html.twig">
+      <file leaf-file-name="ShopVote.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVote.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="70.0" vertical-offset="2160" max-vertical-offset="11304">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#13#51#0#Twig" expanded="true" />
-                <element signature="e#622#641#0#HTML" expanded="true" />
-                <element signature="e#849#876#0#HTML" expanded="true" />
-                <element signature="e#2500#2567#0#HTML" expanded="true" />
-                <element signature="e#2770#2788#0#HTML" expanded="true" />
-                <element signature="e#2839#2862#0#HTML" expanded="true" />
-                <element signature="e#3009#3058#0#HTML" expanded="true" />
-                <element signature="e#3348#3404#0#HTML" expanded="true" />
-                <element signature="e#4556#4623#0#HTML" expanded="true" />
-                <element signature="e#4835#4853#0#HTML" expanded="true" />
-                <element signature="e#4904#4927#0#HTML" expanded="true" />
-                <element signature="e#5074#5123#0#HTML" expanded="true" />
-                <element signature="e#5465#5521#0#HTML" expanded="true" />
-                <element signature="e#6751#6818#0#HTML" expanded="true" />
-                <element signature="e#7030#7048#0#HTML" expanded="true" />
-                <element signature="e#7099#7122#0#HTML" expanded="true" />
-                <element signature="e#7269#7318#0#HTML" expanded="true" />
-                <element signature="e#7660#7716#0#HTML" expanded="true" />
-                <element signature="e#8869#8936#0#HTML" expanded="true" />
-                <element signature="e#9148#9166#0#HTML" expanded="true" />
-                <element signature="e#9217#9240#0#HTML" expanded="true" />
-                <element signature="e#9387#9436#0#HTML" expanded="true" />
-                <element signature="e#9778#9834#0#HTML" expanded="true" />
-                <element signature="e#11064#11131#0#HTML" expanded="true" />
-                <element signature="e#11343#11361#0#HTML" expanded="true" />
-                <element signature="e#11412#11435#0#HTML" expanded="true" />
-                <element signature="e#11582#11631#0#HTML" expanded="true" />
-                <element signature="e#11973#12029#0#HTML" expanded="true" />
-                <element signature="e#13182#13249#0#HTML" expanded="true" />
-                <element signature="e#13461#13479#0#HTML" expanded="true" />
-                <element signature="e#13530#13553#0#HTML" expanded="true" />
-                <element signature="e#13700#13749#0#HTML" expanded="true" />
-                <element signature="e#14091#14147#0#HTML" expanded="true" />
-                <element signature="e#15966#16033#0#HTML" expanded="true" />
-                <element signature="e#16236#16254#0#HTML" expanded="true" />
-                <element signature="e#16305#16328#0#HTML" expanded="true" />
-                <element signature="e#16475#16524#0#HTML" expanded="true" />
-                <element signature="e#16814#16870#0#HTML" expanded="true" />
-                <element signature="e#18023#18090#0#HTML" expanded="true" />
-                <element signature="e#18302#18320#0#HTML" expanded="true" />
-                <element signature="e#18371#18394#0#HTML" expanded="true" />
-                <element signature="e#18541#18590#0#HTML" expanded="true" />
-                <element signature="e#18932#18988#0#HTML" expanded="true" />
-                <element signature="e#20218#20285#0#HTML" expanded="true" />
-                <element signature="e#20497#20515#0#HTML" expanded="true" />
-                <element signature="e#20566#20589#0#HTML" expanded="true" />
-                <element signature="e#20736#20785#0#HTML" expanded="true" />
-                <element signature="e#21127#21183#0#HTML" expanded="true" />
-                <element signature="e#22336#22403#0#HTML" expanded="true" />
-                <element signature="e#22615#22633#0#HTML" expanded="true" />
-                <element signature="e#22684#22707#0#HTML" expanded="true" />
-                <element signature="e#22854#22903#0#HTML" expanded="true" />
-                <element signature="e#23245#23301#0#HTML" expanded="true" />
-                <element signature="e#24532#24599#0#HTML" expanded="true" />
-                <element signature="e#24811#24829#0#HTML" expanded="true" />
-                <element signature="e#24880#24903#0#HTML" expanded="true" />
-                <element signature="e#25050#25099#0#HTML" expanded="true" />
-                <element signature="e#25441#25497#0#HTML" expanded="true" />
-                <element signature="e#26650#26717#0#HTML" expanded="true" />
-                <element signature="e#26929#26947#0#HTML" expanded="true" />
-                <element signature="e#26998#27021#0#HTML" expanded="true" />
-                <element signature="e#27168#27217#0#HTML" expanded="true" />
-                <element signature="e#27559#27615#0#HTML" expanded="true" />
-                <element signature="e#28213#28240#0#HTML" expanded="true" />
-                <element signature="e#29457#29524#0#HTML" expanded="true" />
-                <element signature="e#29727#29745#0#HTML" expanded="true" />
-                <element signature="e#29796#29819#0#HTML" expanded="true" />
-                <element signature="e#29966#30015#0#HTML" expanded="true" />
-                <element signature="e#30305#30361#0#HTML" expanded="true" />
-                <element signature="e#31513#31580#0#HTML" expanded="true" />
-                <element signature="e#31792#31810#0#HTML" expanded="true" />
-                <element signature="e#31861#31884#0#HTML" expanded="true" />
-                <element signature="e#32031#32080#0#HTML" expanded="true" />
-                <element signature="e#32422#32478#0#HTML" expanded="true" />
-                <element signature="e#33708#33775#0#HTML" expanded="true" />
-                <element signature="e#33987#34005#0#HTML" expanded="true" />
-                <element signature="e#34056#34079#0#HTML" expanded="true" />
-                <element signature="e#34226#34275#0#HTML" expanded="true" />
-                <element signature="e#34617#34673#0#HTML" expanded="true" />
-                <element signature="e#35826#35893#0#HTML" expanded="true" />
-                <element signature="e#36105#36123#0#HTML" expanded="true" />
-                <element signature="e#36174#36197#0#HTML" expanded="true" />
-                <element signature="e#36344#36393#0#HTML" expanded="true" />
-                <element signature="e#36735#36791#0#HTML" expanded="true" />
-                <element signature="e#38022#38089#0#HTML" expanded="true" />
-                <element signature="e#38301#38319#0#HTML" expanded="true" />
-                <element signature="e#38370#38393#0#HTML" expanded="true" />
-                <element signature="e#38540#38589#0#HTML" expanded="true" />
-                <element signature="e#38931#38987#0#HTML" expanded="true" />
-                <element signature="e#40141#40208#0#HTML" expanded="true" />
-                <element signature="e#40420#40438#0#HTML" expanded="true" />
-                <element signature="e#40489#40512#0#HTML" expanded="true" />
-                <element signature="e#40659#40708#0#HTML" expanded="true" />
-                <element signature="e#41050#41106#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-9.333333" vertical-offset="1656" max-vertical-offset="2304">
+              <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/CategoryController.php">
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6574395" vertical-offset="5146" max-vertical-offset="5796">
-              <caret line="316" column="26" selection-start-line="316" selection-start-column="26" selection-end-line="316" selection-end-column="26" />
+            <state vertical-scroll-proportion="1.5570934" vertical-offset="270" max-vertical-offset="2142">
+              <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
               <folding>
-                <element signature="e#8932#8985#1#PHP" expanded="true" />
+                <element signature="e#12#50#0#Twig" expanded="true" />
+                <element signature="e#613#624#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,15 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/js/banner.js" />
-        <option value="$PROJECT_DIR$/web/bundles/phenomwafeee/js/homepage.js" />
-        <option value="$PROJECT_DIR$/web/bundles/phenomwafeee/css/home.page.css" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/StaticPageController.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Authenticate/resetpassword.html.twig" />
-        <option value="dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..user" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Form/UserType.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/MediaEntity.php" />
@@ -207,7 +108,6 @@
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/StaticPage/contact_us.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css/contact.page.css" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Form/ShopType.php" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/Category.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Form/CategoryType.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/edit.html.twig" />
@@ -218,10 +118,8 @@
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/add_category.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/add_product.html.twig" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/ShopController.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Product/show.html.twig" />
@@ -230,7 +128,6 @@
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css/user.profile.page.css" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/User/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/User/user_profile.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/User/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/User/successUpdate.html.twig" />
@@ -240,6 +137,19 @@
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css/category.page.css" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/category.page.html.twig" />
         <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/CategoryController.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVotePoint.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/CategoryRepository.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/CommentRepository.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ProductRepository.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopFollowRepository.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopRepository.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVotePointRepository.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVoteRepository.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/ShopController.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVote.php" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/edit.html.twig" />
       </list>
     </option>
   </component>
@@ -872,7 +782,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShopInfoPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wafeeeProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wafeeeProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Phenom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WafeeeBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1126,13 +1070,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images" />
       <recent name="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/js" />
-      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images" />
       <recent name="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css" />
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/bundles/phenomwafeee/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/ShopPage" />
       <recent name="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/HomePage" />
       <recent name="$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/Base" />
     </key>
@@ -1256,230 +1201,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Form/CategoryType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48730963" vertical-offset="0" max-vertical-offset="810">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2741117" vertical-offset="0" max-vertical-offset="591">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopFollow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1782">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..shop">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Form/ProductType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26903552" vertical-offset="147" max-vertical-offset="846">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/Shop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46712804" vertical-offset="0" max-vertical-offset="4032">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding>
-            <element signature="e#46#78#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2741117" vertical-offset="0" max-vertical-offset="591">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..category">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Product/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030456852" vertical-offset="0" max-vertical-offset="591">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/add_product.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09137056" vertical-offset="0" max-vertical-offset="591">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.888889" vertical-offset="183" max-vertical-offset="774">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2572" max-vertical-offset="3312">
-          <caret line="156" column="5" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
-          <folding>
-            <element signature="e#46#94#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43598616" vertical-offset="0" max-vertical-offset="4518">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding>
-            <element signature="e#46#78#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..product">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..category_product">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/Base/Logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/add_category.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42639595" vertical-offset="0" max-vertical-offset="591">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/ShopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7733564" vertical-offset="237" max-vertical-offset="5796">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-          <folding>
-            <element signature="e#50#90#0#PHP" expanded="false" />
-            <element signature="e#983#1019#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.074074" vertical-offset="295" max-vertical-offset="4410">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-          <folding>
-            <element signature="e#50#95#0#PHP" expanded="false" />
-            <element signature="e#1361#1377#1#PHP" expanded="false" />
-            <element signature="e#1739#1753#0#PHP" expanded="false" />
-            <element signature="e#2270#2286#1#PHP" expanded="false" />
-            <element signature="e#3741#3757#0#PHP" expanded="false" />
-            <element signature="e#4832#4848#0#PHP" expanded="false" />
-            <element signature="e#5164#5178#0#PHP" expanded="false" />
-            <element signature="e#6103#6112#1#PHP" expanded="false" />
-            <element signature="e#6434#6450#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Product/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6262976" vertical-offset="304" max-vertical-offset="990">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="false" />
-            <element signature="e#517#529#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/HomePage/sig-up.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/Base/SignUp.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/Base/signup.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/phenomwafeee/images/UserProfilePage/UserAvarta.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css/right.bar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1492,6 +1218,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14359862" vertical-offset="295" max-vertical-offset="900">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,25 +1238,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39593908" vertical-offset="0" max-vertical-offset="810">
-          <caret line="13" column="62" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/UserProfilePage/UserAvarta.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46193773" vertical-offset="9237" max-vertical-offset="10116">
-          <caret line="533" column="20" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="20" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/AccountController.php">
@@ -1581,16 +1292,6 @@
           <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="e#37#48#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/User/user_profile.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-56.0" vertical-offset="324" max-vertical-offset="2196">
-          <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
-          <folding>
-            <element signature="e#13#51#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1650,14 +1351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-204.66667" vertical-offset="0" max-vertical-offset="6012">
-          <caret line="307" column="33" selection-start-line="307" selection-start-column="33" selection-end-line="307" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css/category.page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21359223" vertical-offset="1974" max-vertical-offset="2664">
@@ -1676,113 +1369,428 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Category/category.page.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="70.0" vertical-offset="2160" max-vertical-offset="11304">
+        <state vertical-scroll-proportion="-3.2698963" vertical-offset="2160" max-vertical-offset="11304">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#13#51#0#Twig" expanded="true" />
-            <element signature="e#622#641#0#HTML" expanded="true" />
-            <element signature="e#849#876#0#HTML" expanded="true" />
-            <element signature="e#2500#2567#0#HTML" expanded="true" />
-            <element signature="e#2770#2788#0#HTML" expanded="true" />
-            <element signature="e#2839#2862#0#HTML" expanded="true" />
-            <element signature="e#3009#3058#0#HTML" expanded="true" />
-            <element signature="e#3348#3404#0#HTML" expanded="true" />
-            <element signature="e#4556#4623#0#HTML" expanded="true" />
-            <element signature="e#4835#4853#0#HTML" expanded="true" />
-            <element signature="e#4904#4927#0#HTML" expanded="true" />
-            <element signature="e#5074#5123#0#HTML" expanded="true" />
-            <element signature="e#5465#5521#0#HTML" expanded="true" />
-            <element signature="e#6751#6818#0#HTML" expanded="true" />
-            <element signature="e#7030#7048#0#HTML" expanded="true" />
-            <element signature="e#7099#7122#0#HTML" expanded="true" />
-            <element signature="e#7269#7318#0#HTML" expanded="true" />
-            <element signature="e#7660#7716#0#HTML" expanded="true" />
-            <element signature="e#8869#8936#0#HTML" expanded="true" />
-            <element signature="e#9148#9166#0#HTML" expanded="true" />
-            <element signature="e#9217#9240#0#HTML" expanded="true" />
-            <element signature="e#9387#9436#0#HTML" expanded="true" />
-            <element signature="e#9778#9834#0#HTML" expanded="true" />
-            <element signature="e#11064#11131#0#HTML" expanded="true" />
-            <element signature="e#11343#11361#0#HTML" expanded="true" />
-            <element signature="e#11412#11435#0#HTML" expanded="true" />
-            <element signature="e#11582#11631#0#HTML" expanded="true" />
-            <element signature="e#11973#12029#0#HTML" expanded="true" />
-            <element signature="e#13182#13249#0#HTML" expanded="true" />
-            <element signature="e#13461#13479#0#HTML" expanded="true" />
-            <element signature="e#13530#13553#0#HTML" expanded="true" />
-            <element signature="e#13700#13749#0#HTML" expanded="true" />
-            <element signature="e#14091#14147#0#HTML" expanded="true" />
-            <element signature="e#15966#16033#0#HTML" expanded="true" />
-            <element signature="e#16236#16254#0#HTML" expanded="true" />
-            <element signature="e#16305#16328#0#HTML" expanded="true" />
-            <element signature="e#16475#16524#0#HTML" expanded="true" />
-            <element signature="e#16814#16870#0#HTML" expanded="true" />
-            <element signature="e#18023#18090#0#HTML" expanded="true" />
-            <element signature="e#18302#18320#0#HTML" expanded="true" />
-            <element signature="e#18371#18394#0#HTML" expanded="true" />
-            <element signature="e#18541#18590#0#HTML" expanded="true" />
-            <element signature="e#18932#18988#0#HTML" expanded="true" />
-            <element signature="e#20218#20285#0#HTML" expanded="true" />
-            <element signature="e#20497#20515#0#HTML" expanded="true" />
-            <element signature="e#20566#20589#0#HTML" expanded="true" />
-            <element signature="e#20736#20785#0#HTML" expanded="true" />
-            <element signature="e#21127#21183#0#HTML" expanded="true" />
-            <element signature="e#22336#22403#0#HTML" expanded="true" />
-            <element signature="e#22615#22633#0#HTML" expanded="true" />
-            <element signature="e#22684#22707#0#HTML" expanded="true" />
-            <element signature="e#22854#22903#0#HTML" expanded="true" />
-            <element signature="e#23245#23301#0#HTML" expanded="true" />
-            <element signature="e#24532#24599#0#HTML" expanded="true" />
-            <element signature="e#24811#24829#0#HTML" expanded="true" />
-            <element signature="e#24880#24903#0#HTML" expanded="true" />
-            <element signature="e#25050#25099#0#HTML" expanded="true" />
-            <element signature="e#25441#25497#0#HTML" expanded="true" />
-            <element signature="e#26650#26717#0#HTML" expanded="true" />
-            <element signature="e#26929#26947#0#HTML" expanded="true" />
-            <element signature="e#26998#27021#0#HTML" expanded="true" />
-            <element signature="e#27168#27217#0#HTML" expanded="true" />
-            <element signature="e#27559#27615#0#HTML" expanded="true" />
-            <element signature="e#28213#28240#0#HTML" expanded="true" />
-            <element signature="e#29457#29524#0#HTML" expanded="true" />
-            <element signature="e#29727#29745#0#HTML" expanded="true" />
-            <element signature="e#29796#29819#0#HTML" expanded="true" />
-            <element signature="e#29966#30015#0#HTML" expanded="true" />
-            <element signature="e#30305#30361#0#HTML" expanded="true" />
-            <element signature="e#31513#31580#0#HTML" expanded="true" />
-            <element signature="e#31792#31810#0#HTML" expanded="true" />
-            <element signature="e#31861#31884#0#HTML" expanded="true" />
-            <element signature="e#32031#32080#0#HTML" expanded="true" />
-            <element signature="e#32422#32478#0#HTML" expanded="true" />
-            <element signature="e#33708#33775#0#HTML" expanded="true" />
-            <element signature="e#33987#34005#0#HTML" expanded="true" />
-            <element signature="e#34056#34079#0#HTML" expanded="true" />
-            <element signature="e#34226#34275#0#HTML" expanded="true" />
-            <element signature="e#34617#34673#0#HTML" expanded="true" />
-            <element signature="e#35826#35893#0#HTML" expanded="true" />
-            <element signature="e#36105#36123#0#HTML" expanded="true" />
-            <element signature="e#36174#36197#0#HTML" expanded="true" />
-            <element signature="e#36344#36393#0#HTML" expanded="true" />
-            <element signature="e#36735#36791#0#HTML" expanded="true" />
-            <element signature="e#38022#38089#0#HTML" expanded="true" />
-            <element signature="e#38301#38319#0#HTML" expanded="true" />
-            <element signature="e#38370#38393#0#HTML" expanded="true" />
-            <element signature="e#38540#38589#0#HTML" expanded="true" />
-            <element signature="e#38931#38987#0#HTML" expanded="true" />
-            <element signature="e#40141#40208#0#HTML" expanded="true" />
-            <element signature="e#40420#40438#0#HTML" expanded="true" />
-            <element signature="e#40489#40512#0#HTML" expanded="true" />
-            <element signature="e#40659#40708#0#HTML" expanded="true" />
-            <element signature="e#41050#41106#0#HTML" expanded="true" />
+            <element signature="e#13#51#0#Twig" expanded="false" />
+            <element signature="e#622#641#0#HTML" expanded="false" />
+            <element signature="e#849#876#0#HTML" expanded="false" />
+            <element signature="e#2500#2567#0#HTML" expanded="false" />
+            <element signature="e#2770#2788#0#HTML" expanded="false" />
+            <element signature="e#2839#2862#0#HTML" expanded="false" />
+            <element signature="e#3009#3058#0#HTML" expanded="false" />
+            <element signature="e#3348#3404#0#HTML" expanded="false" />
+            <element signature="e#4556#4623#0#HTML" expanded="false" />
+            <element signature="e#4835#4853#0#HTML" expanded="false" />
+            <element signature="e#4904#4927#0#HTML" expanded="false" />
+            <element signature="e#5074#5123#0#HTML" expanded="false" />
+            <element signature="e#5465#5521#0#HTML" expanded="false" />
+            <element signature="e#6751#6818#0#HTML" expanded="false" />
+            <element signature="e#7030#7048#0#HTML" expanded="false" />
+            <element signature="e#7099#7122#0#HTML" expanded="false" />
+            <element signature="e#7269#7318#0#HTML" expanded="false" />
+            <element signature="e#7660#7716#0#HTML" expanded="false" />
+            <element signature="e#8869#8936#0#HTML" expanded="false" />
+            <element signature="e#9148#9166#0#HTML" expanded="false" />
+            <element signature="e#9217#9240#0#HTML" expanded="false" />
+            <element signature="e#9387#9436#0#HTML" expanded="false" />
+            <element signature="e#9778#9834#0#HTML" expanded="false" />
+            <element signature="e#11064#11131#0#HTML" expanded="false" />
+            <element signature="e#11343#11361#0#HTML" expanded="false" />
+            <element signature="e#11412#11435#0#HTML" expanded="false" />
+            <element signature="e#11582#11631#0#HTML" expanded="false" />
+            <element signature="e#11973#12029#0#HTML" expanded="false" />
+            <element signature="e#13182#13249#0#HTML" expanded="false" />
+            <element signature="e#13461#13479#0#HTML" expanded="false" />
+            <element signature="e#13530#13553#0#HTML" expanded="false" />
+            <element signature="e#13700#13749#0#HTML" expanded="false" />
+            <element signature="e#14091#14147#0#HTML" expanded="false" />
+            <element signature="e#15966#16033#0#HTML" expanded="false" />
+            <element signature="e#16236#16254#0#HTML" expanded="false" />
+            <element signature="e#16305#16328#0#HTML" expanded="false" />
+            <element signature="e#16475#16524#0#HTML" expanded="false" />
+            <element signature="e#16814#16870#0#HTML" expanded="false" />
+            <element signature="e#18023#18090#0#HTML" expanded="false" />
+            <element signature="e#18302#18320#0#HTML" expanded="false" />
+            <element signature="e#18371#18394#0#HTML" expanded="false" />
+            <element signature="e#18541#18590#0#HTML" expanded="false" />
+            <element signature="e#18932#18988#0#HTML" expanded="false" />
+            <element signature="e#20218#20285#0#HTML" expanded="false" />
+            <element signature="e#20497#20515#0#HTML" expanded="false" />
+            <element signature="e#20566#20589#0#HTML" expanded="false" />
+            <element signature="e#20736#20785#0#HTML" expanded="false" />
+            <element signature="e#21127#21183#0#HTML" expanded="false" />
+            <element signature="e#22336#22403#0#HTML" expanded="false" />
+            <element signature="e#22615#22633#0#HTML" expanded="false" />
+            <element signature="e#22684#22707#0#HTML" expanded="false" />
+            <element signature="e#22854#22903#0#HTML" expanded="false" />
+            <element signature="e#23245#23301#0#HTML" expanded="false" />
+            <element signature="e#24532#24599#0#HTML" expanded="false" />
+            <element signature="e#24811#24829#0#HTML" expanded="false" />
+            <element signature="e#24880#24903#0#HTML" expanded="false" />
+            <element signature="e#25050#25099#0#HTML" expanded="false" />
+            <element signature="e#25441#25497#0#HTML" expanded="false" />
+            <element signature="e#26650#26717#0#HTML" expanded="false" />
+            <element signature="e#26929#26947#0#HTML" expanded="false" />
+            <element signature="e#26998#27021#0#HTML" expanded="false" />
+            <element signature="e#27168#27217#0#HTML" expanded="false" />
+            <element signature="e#27559#27615#0#HTML" expanded="false" />
+            <element signature="e#28213#28240#0#HTML" expanded="false" />
+            <element signature="e#29457#29524#0#HTML" expanded="false" />
+            <element signature="e#29727#29745#0#HTML" expanded="false" />
+            <element signature="e#29796#29819#0#HTML" expanded="false" />
+            <element signature="e#29966#30015#0#HTML" expanded="false" />
+            <element signature="e#30305#30361#0#HTML" expanded="false" />
+            <element signature="e#31513#31580#0#HTML" expanded="false" />
+            <element signature="e#31792#31810#0#HTML" expanded="false" />
+            <element signature="e#31861#31884#0#HTML" expanded="false" />
+            <element signature="e#32031#32080#0#HTML" expanded="false" />
+            <element signature="e#32422#32478#0#HTML" expanded="false" />
+            <element signature="e#33708#33775#0#HTML" expanded="false" />
+            <element signature="e#33987#34005#0#HTML" expanded="false" />
+            <element signature="e#34056#34079#0#HTML" expanded="false" />
+            <element signature="e#34226#34275#0#HTML" expanded="false" />
+            <element signature="e#34617#34673#0#HTML" expanded="false" />
+            <element signature="e#35826#35893#0#HTML" expanded="false" />
+            <element signature="e#36105#36123#0#HTML" expanded="false" />
+            <element signature="e#36174#36197#0#HTML" expanded="false" />
+            <element signature="e#36344#36393#0#HTML" expanded="false" />
+            <element signature="e#36735#36791#0#HTML" expanded="false" />
+            <element signature="e#38022#38089#0#HTML" expanded="false" />
+            <element signature="e#38301#38319#0#HTML" expanded="false" />
+            <element signature="e#38370#38393#0#HTML" expanded="false" />
+            <element signature="e#38540#38589#0#HTML" expanded="false" />
+            <element signature="e#38931#38987#0#HTML" expanded="false" />
+            <element signature="e#40141#40208#0#HTML" expanded="false" />
+            <element signature="e#40420#40438#0#HTML" expanded="false" />
+            <element signature="e#40489#40512#0#HTML" expanded="false" />
+            <element signature="e#40659#40708#0#HTML" expanded="false" />
+            <element signature="e#41050#41106#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6574395" vertical-offset="5146" max-vertical-offset="5796">
-          <caret line="316" column="26" selection-start-line="316" selection-start-column="26" selection-end-line="316" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.4083045" vertical-offset="5146" max-vertical-offset="5796">
+          <caret line="308" column="38" selection-start-line="308" selection-start-column="38" selection-end-line="308" selection-end-column="38" />
           <folding>
             <element signature="e#8932#8985#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/User/user_profile.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.615917" vertical-offset="324" max-vertical-offset="2196">
+          <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
+          <folding>
+            <element signature="e#3523#3540#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Form/ShopType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39593908" vertical-offset="0" max-vertical-offset="828">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/Shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5294118" vertical-offset="2106" max-vertical-offset="3960">
+          <caret line="138" column="40" selection-start-line="138" selection-start-column="40" selection-end-line="138" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47231835" vertical-offset="2211" max-vertical-offset="10116">
+          <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css/shopinfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2844">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Base/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0" vertical-offset="216" max-vertical-offset="6030">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="e#2610#2622#0#Twig" expanded="true" />
+            <element signature="e#3015#3027#0#Twig" expanded="true" />
+            <element signature="e#3222#3233#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/css/rating.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2016">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/CategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70050764" vertical-offset="0" max-vertical-offset="591">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <marker date="1438926208414" expanded="true" signature="-1:-1" placeholder="SELECT s.id ..PhenomWafeeeBundle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/CommentRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7309645" vertical-offset="0" max-vertical-offset="591">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <marker date="1438926228382" expanded="true" signature="-1:-1" placeholder="SELECT c.con..PhenomWafeeeBundle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ProductRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39965397" vertical-offset="93" max-vertical-offset="792">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <marker date="1438926278166" expanded="true" signature="-1:-1" placeholder="SELECT p FRO..PhenomWafeeeBundle..." />
+            <marker date="1438926278166" expanded="true" signature="-1:-1" placeholder="SELECT p FRO..PhenomWafeeeBundle..." />
+            <marker date="1438926278166" expanded="true" signature="-1:-1" placeholder="SELECT c.id ..PhenomWafeeeBundle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVoteRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="666">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#669#698#1#PHP" expanded="true" />
+            <marker date="1438926338406" expanded="true" signature="-1:-1" placeholder="SELECT s FRO..PhenomWafeeeBundle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVotePointRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5177665" vertical-offset="0" max-vertical-offset="591">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..category_product">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..shop">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..shopFollow">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/e54f3741-3248-49df-a8e1-4584f3cfe50e/wafeeeDB..notification">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/4669d491/ec9140bd-4e77-47fe-a1ac-46877156c97c/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="618">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/js/star-rating.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="618">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopFollowRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48730963" vertical-offset="0" max-vertical-offset="591">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <marker date="1438926297262" expanded="true" signature="-1:-1" placeholder="SELECT s FRO..PhenomWafeeeBundle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Controller/ShopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="7560">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding>
+            <element signature="e#50#90#0#PHP" expanded="true" />
+            <element signature="e#1210#1246#0#PHP" expanded="true" />
+            <element signature="e#3876#3916#0#PHP" expanded="true" />
+            <element signature="e#10288#10299#0#PHP" expanded="true" />
+            <element signature="e#10360#10400#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVotePoint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="1800">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/ec9140bd-4e77-47fe-a1ac-46877156c97c/wafeeeDB..user">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/ec9140bd-4e77-47fe-a1ac-46877156c97c/wafeeeDB..shopVotePoint">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/ec9140bd-4e77-47fe-a1ac-46877156c97c/wafeeeDB..shopVote">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4669d491/ec9140bd-4e77-47fe-a1ac-46877156c97c/wafeeeDB..shopFollow">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopVote.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="1656" max-vertical-offset="2304">
+          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Entity/ShopRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15051903" vertical-offset="75" max-vertical-offset="720">
+          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+          <folding>
+            <marker date="1438926311418" expanded="true" signature="-1:-1" placeholder="SELECT s FRO..PhenomWafeeeBundle..." />
+            <marker date="1438926311418" expanded="true" signature="-1:-1" placeholder="SELECT s FRO..PhenomWafeeeBundle..." />
+            <marker date="1438926311418" expanded="true" signature="-1:-1" placeholder="SELECT s FRO..PhenomWafeeeBundle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/public/images/ShopInfoPage/InfoField.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34256056" vertical-offset="0" max-vertical-offset="3780">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#12#50#0#Twig" expanded="true" />
+            <element signature="e#4160#4169#0#Twig" expanded="true" />
+            <element signature="e#5957#5967#0#Twig" expanded="true" />
+            <element signature="e#6741#6753#0#Twig" expanded="true" />
+            <element signature="e#8260#8268#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Phenom/WafeeeBundle/Resources/views/Shop/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5570934" vertical-offset="270" max-vertical-offset="2142">
+          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+          <folding>
+            <element signature="e#12#50#0#Twig" expanded="true" />
+            <element signature="e#613#624#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

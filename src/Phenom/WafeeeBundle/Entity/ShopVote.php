@@ -24,14 +24,6 @@ class ShopVote
     private $id;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="votePoint", type="integer")
-     */
-    private $votePoint;
-
-
-    /**
      * @ManyToOne(targetEntity="Shop")
      * @JoinColumn(name="shop_id", referencedColumnName="id", onDelete="CASCADE")
      **/
@@ -42,6 +34,12 @@ class ShopVote
      * @JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      **/
     private $user_id;
+
+    /**
+     * @ManyToOne(targetEntity="ShopVotePoint")
+     * @JoinColumn(name="shopvote_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $shopvote_id;
 
 
     /**
@@ -54,28 +52,6 @@ class ShopVote
         return $this->id;
     }
 
-    /**
-     * Set votePoint
-     *
-     * @param integer $votePoint
-     * @return ShopVote
-     */
-    public function setVotePoint($votePoint)
-    {
-        $this->votePoint = $votePoint;
-
-        return $this;
-    }
-
-    /**
-     * Get votePoint
-     *
-     * @return integer 
-     */
-    public function getVotePoint()
-    {
-        return $this->votePoint;
-    }
 
     /**
      * Set shop_id
@@ -121,5 +97,28 @@ class ShopVote
     public function getUserId()
     {
         return $this->user_id;
+    }
+
+    /**
+     * Set shopvote_id
+     *
+     * @param \Phenom\WafeeeBundle\Entity\ShopVotePoint $shopvoteId
+     * @return ShopVote
+     */
+    public function setShopvoteId(\Phenom\WafeeeBundle\Entity\ShopVotePoint $shopvoteId = null)
+    {
+        $this->shopvote_id = $shopvoteId;
+
+        return $this;
+    }
+
+    /**
+     * Get shopvote_id
+     *
+     * @return \Phenom\WafeeeBundle\Entity\ShopVotePoint 
+     */
+    public function getShopvoteId()
+    {
+        return $this->shopvote_id;
     }
 }
