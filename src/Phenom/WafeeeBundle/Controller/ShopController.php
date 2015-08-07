@@ -35,7 +35,7 @@ class ShopController extends Controller
      */
     public function showAllShopAction()
     {
-//        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $em = $this->getDoctrine()->getManager();
 
         $shops = $em->getRepository('PhenomWafeeeBundle:Shop')->findAll();
@@ -110,13 +110,25 @@ class ShopController extends Controller
     }
 
     /**
+     * Finds and displays a Shop page.
+     *
+     * @Route("/{id}", name="shop_page")
+     * @Method("GET")
+     *
+     */
+    public function shopPageAction($id)
+    {
+        return $this->render('PhenomWafeeeBundle:Shop:shop_page.html.twig');
+    }
+
+    /**
      * Finds and displays a Shop entity.
      *
      * @Route("/{id}/info", name="shop_show")
      * @Method("GET")
      *
      */
-    public function showShopAction($id)
+    public function showShopInfoAction($id)
     {
         $em = $this->getDoctrine()->getManager();
         $shop = $em->getRepository('PhenomWafeeeBundle:Shop')->getShopById($id);
@@ -238,8 +250,7 @@ class ShopController extends Controller
                     $success = true;
                 }
                 if($success) {
-//                    $numvotes = $shopVotePoint->getNumofvotes();
-//                    $votepoint = $shopVotePoint->getVotepoint();
+
                 }
                 return new JsonResponse(array('success'=>$success));
             }

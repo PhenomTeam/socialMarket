@@ -26,6 +26,13 @@ class ShopRepository extends EntityRepository
         return $query->getOneOrNullResult();
     }
 
+    public function getShopByUserId($user_id)
+    {
+        $em = $this->getEntityManager();
+        $query = $em->createQuery('SELECT s FROM PhenomWafeeeBundle:Shop s WHERE s.user_id='.$user_id);
+        return $query->getOneOrNullResult();
+    }
+
     public function checkOwnerShop($user, $idS) {
         $em = $this->getEntityManager();
         $query = $em->createQuery("SELECT s FROM PhenomWafeeeBundle:Shop s WHERE s.id='".$idS."' AND s.user_id='".$user."'");

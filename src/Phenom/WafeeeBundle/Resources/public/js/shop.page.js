@@ -1,37 +1,41 @@
 $(document).ready(function () {
-
-// CAP SHOP SLIDER
-    var CapSlider = $('#cap-shop-img');
-    CapSlider.owlCarousel({
-        items: 4,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 1500,
-        autoplayHoverPause: true
+    var FashionShopSlider = $(".fashion-shop-img");
+    FashionShopSlider.owlCarousel({
+        items:4,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true
     });
 
-// SHOE SHOP SLIDER
-    var ShoeSlider = $('#shoe-shop-img');
-    ShoeSlider.owlCarousel({
-        items: 4,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 1500,
-        autoplayHoverPause: true
+    var BeautyShopSlider = $("#beauty-shop-img");
+    BeautyShopSlider.owlCarousel({
+        items:4,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:1500,
+        autoplayHoverPause:true
     });
 
-// JACKET SHOP SLIDER
-    var JacketSlider = $('#jacket-shop-img');
-    JacketSlider.owlCarousel({
-        items: 4,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 1500,
-        autoplayHoverPause: true
+    var DevicesShopSlider = $("#device-shop-img");
+    DevicesShopSlider.owlCarousel({
+        items:4,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true
     });
+
+
+    $('#cap-product').click(function() {
+
+
+
+    });
+
 
 
 });

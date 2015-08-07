@@ -1,0 +1,880 @@
+{% extends ('PhenomWafeeeBundle:Base:base.html.twig') %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/phenomwafeee/js/shop.page.js') }}"></script>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/shop.page.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/phenomwafeee/css/shoppage.css') }}">
+{% endblock %}
+
+{% block title %}SHOP PAGE{% endblock %}
+
+{% block content %}
+    <div class="content-field">
+
+        {#  HEADER    #}
+        <div class="content-header">
+            <div class="category">
+                <img src="{{ asset('bundles/phenomwafeee/images/ShopPage/FashionField.png') }}" width="85%">
+            </div>
+        </div>
+
+        {#  CAP    #}
+        <div class="product-line">
+            <img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/ShopPage/Cap.png') }}" height="100%">
+        </div>
+
+        {#  CAP PRODUCT    #}
+        <div class="content-body">
+            <div class="owl-carousel fashion-shop-img">
+                <div>
+                    <div id="product0" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product1" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product2" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product3" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product4" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product5" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product6" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product7" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#  SHOE    #}
+        <div class="product-line">
+            <img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/ShopPage/Shoe.png') }}" height="100%">
+        </div>
+
+        {#  SHOE PRODUCT    #}
+        <div class="content-body">
+            <div class="owl-carousel fashion-shop-img">
+                <div>
+                    <div id="product0" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product1" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product2" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product3" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product4" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product5" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product6" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product7" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#  JACKET    #}
+        <div class="product-line">
+            <img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/ShopPage/Jacket.png') }}" height="100%">
+        </div>
+
+        {#  SHOE PRODUCT    #}
+        <div class="content-body">
+            <div class="owl-carousel fashion-shop-img">
+                <div>
+                    <div id="product0" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product1" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product2" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product3" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product4" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product5" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div id="product6" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+
+                    <div id="product7" class="img-field">
+                        <div class="price">
+                            <span class="price-info">100,000</span>
+                        </div>
+                        <div class="sale-off">
+                            <div class="sale-off-header">
+                                SALE OFF
+                            </div>
+                            <div class="sale-off-info">
+                                50%
+                            </div>
+                        </div>
+
+                        <a href="#"><img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/product-1.png') }}" style="float: left; width: 10em; margin-left: 3em; margin-top: 3em"></a>
+                        <div class="click-to-cart">
+                            <img src="{{ asset('bundles/phenomwafeee/images/CategoryPage/cart.png') }}" style="width: 4em">
+                            <div style="margin-top: 1em">
+                                <img class="product-vote" src="{{ asset('bundles/phenomwafeee/images/CategoryPage/rate.png') }}" style="width: 2em; float: left; margin-left: 1em">
+                                <span class="badge">10</span>
+                            </div>
+                        </div>
+                        <div class="product-name">
+                            <hr style="margin-top: 0em; margin-bottom: 1em; width: 10em">
+                            <a href="#"><span>TOMMY T-SHIRT</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        {#  REVIEW    #}
+        <div class="content-header review-header">
+            <div class="category">
+                <img class="img-rounded" src="{{ asset('bundles/phenomwafeee/images/ShopPage/ReviewField.png') }}" width="85%" >
+            </div>
+        </div>
+
+        {#  REVIEW BODY    #}
+        <div class="comments" style="float: left">
+            <div class="comments-panel" id="comments-panel">
+                <div class="show-comment" id="show-comment">
+                    <div class="user-comment">
+                        {#<div class="avatar"><img src="{{ asset('upload/user-avatar/') }}i48xBRzZ6OimB.jpg"></div>#}
+                        <div class="comment">
+                            <div class="content-comment">
+                                <div class="rating">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                </div>
+                                <div class="author">
+                                    <span class="name-author">ongnoicuastevejob</span>
+                                    <span class="time">05-08-2015</span>
+                                </div>
+                                <div class="content">
+                                    <p>A few mocks are created, disguised as the objects which the controller expects. The default flow only requires a form factory and a templating engine. The form factory should return a form. Some so-called expectations are added to the mock objects, to make sure that certain methods will be called exactly once.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        <div class="avatar"><img src="{{ asset('upload/user-avatar/') }}i48xBRzZ6OimB.jpg"></div>
+                        <div class="comment">
+                            <div class="content-comment">
+                                <div class="rating">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                </div>
+                                <div class="author">
+                                    <span class="name-author">ongnoicuastevejob</span>
+                                    <span class="time">05-08-2015</span>
+                                </div>
+                                <div class="content">
+                                    <p>A few mocks are created, disguised as the objects which the controller expects. The default flow only requires a form factory and a templating engine. The form factory should return a form. Some so-called expectations are added to the mock objects, to make sure that certain methods will be called exactly once.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        <div class="avatar"><img src="{{ asset('upload/user-avatar/') }}i48xBRzZ6OimB.jpg"></div>
+                        <div class="comment">
+                            <div class="content-comment">
+                                <div class="rating">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                </div>
+                                <div class="author">
+                                    <span class="name-author">ongnoicuastevejob</span>
+                                    <span class="time">05-08-2015</span>
+                                </div>
+                                <div class="content">
+                                    <p>A few mocks are created, disguised as the objects which the controller expects. The default flow only requires a form factory and a templating engine. The form factory should return a form. Some so-called expectations are added to the mock objects, to make sure that certain methods will be called exactly once.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        <div class="avatar"><img src="{{ asset('upload/user-avatar/') }}i48xBRzZ6OimB.jpg"></div>
+                        <div class="comment">
+                            <div class="content-comment">
+                                <div class="rating">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                    <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                </div>
+                                <div class="author">
+                                    <span class="name-author">ongnoicuastevejob</span>
+                                    <span class="time">05-08-2015</span>
+                                </div>
+                                <div class="content">
+                                    <p>A few mocks are created, disguised as the objects which the controller expects. The default flow only requires a form factory and a templating engine. The form factory should return a form. Some so-called expectations are added to the mock objects, to make sure that certain methods will be called exactly once.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <div class="write-comment">
+                        <div class="user-comment">
+                            <div class="comment-form">
+                                <div class="avatar"><img src="{{ asset('upload/user-avatar/') }}i48xBRzZ6OimB.jpg"></div>
+                                <div class="comment">
+                                    <div class="content-comment">
+                                        <div class="rating">
+                                            <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                            <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                            <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                            <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                            <img src="{{ asset('bundles/phenomwafeee/images/UserProfilePage/UserVote.png') }}">
+                                        </div>
+                                        <div class="author">
+                                            <span class="name-author">ongnoicuaSteveJob</span>
+                                            {#<span class="time">16-07-2015</span>#}
+                                        </div>
+
+                                        <form class="content" id="form-comment" action="" method="post">
+                                            <textarea name="comment" id="input-comment"></textarea>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p><a href="{{ path('user_login') }}">Sign in</a> to comment</p>
+                {% endif %}
+            </div>
+            <div class="follow">
+                <div>
+                    <span>Find me on:    </span>
+                    <img src="{{ asset('images/productdetail/facebook.png') }}">
+                    <img src="{{ asset('images/productdetail/twitter.png') }}">
+                    <img src="{{ asset('images/productdetail/google-plus.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
