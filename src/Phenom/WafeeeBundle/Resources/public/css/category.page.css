@@ -1,0 +1,142 @@
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.owl-carousel .owl-stage-outer{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #3f3f3f;
+}
+
+
+.panel-category{
+    margin-bottom: 0em;
+    width: inherit;
+}
+
+.panel-heading-category{
+    padding: 0em;
+    padding-right: 40em;
+    padding-left: 40em;
+    background-color: #ed3a39;
+}
+
+.content-body-info{
+    margin-left:0em;
+    margin-right: 0em;
+    background-color: #ffffff;
+}
+
+.product-type{
+    width: 12em;
+    height: auto;
+    background-color: #EE5757;
+    float: left;
+}
+
+.product-type-name{
+    margin-top: 17em;
+    margin-bottom: 16em;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.product-content{
+    width: 72em;
+    padding-left: 0em;
+    padding-right: 0em;
+    float: right;
+}
+
+.product-content-body{
+    width: inherit;
+    padding-bottom: 0em;
+}
+
+.img-field{
+    border: 1px solid #c0c0c0;
+    width: 20em;
+    height: 22em;
+}
+
+.price {
+    float: left;
+    width: 10em;
+    background-color: #CC0000;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.price-info{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.sale-off {
+    float: right;
+    width: 5em;
+    margin-right: 1em;
+    text-align: center;
+    background-color: #CC0000;
+}
+
+.sale-off-header{
+    padding-left: 1em;
+    padding-right: 1em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.sale-off-info{
+    background-color: #ce8483;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    color: #CC0000;
+}
+
+.click-to-cart {
+    width: 5em;
+    float: right;
+    margin-top: 1em;
+}
+
+.badge{
+    margin-bottom: 1em;
+    color: #3f3f3f;
+    background-color: transparent;
+    padding: 0em;
+    float: right;
+    margin-right: 1em;
+}
+
+.shop-name{
+    padding: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    font-size: 15px;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+}
+
+.panel-footer{
+    padding: 0em;
+    background-color: #ed3a39;
+    height: 2em;
+}
+
+.container-fluid-footer{
+    padding-left: 0em;
+    padding-right: 0em;
+}

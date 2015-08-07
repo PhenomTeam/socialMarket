@@ -80,16 +80,9 @@ class UserController extends Controller
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
-
-        $editForm = $this->createForm(new UserType(), $user, array(
-            'action' => $this->generateUrl('user_update_profile', array('username' => $user->getUsername())),
-            'method' => 'PUT',
-        ));
-
-        return $this->render('PhenomWafeeeBundle:User:edit.html.twig',
+        return $this->render('PhenomWafeeeBundle:User:editUserProfile.html.twig',
             array(
             'user'      => $user,
-            'edit_form'   => $editForm->createView(),
              )
         );
     }
@@ -98,8 +91,8 @@ class UserController extends Controller
      * Edits an existing User entity.
      *
      * @Route("/{username}", name="user_update_profile")
-     * @Method("PUT")
-     * @Template("PhenomWafeeeBundle:User:edit.html.twig")
+     * @Method("POST")
+     *
      */
     public function updateUserProfileAction($username)
     {
@@ -113,31 +106,34 @@ class UserController extends Controller
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
-        $editForm = $this->createForm(new UserType(), $user, array(
-            'action' => $this->generateUrl('user_update_profile', array('username' => $user->getUsername())),
-            'method' => 'PUT',
-        ));
-
-        $editForm->handleRequest($request);
-
-        if ($editForm->isValid())
+        if ($request->getMethod() == 'POST')
         {
-            $user = $editForm->getData();
+            $firstname = $request->get('firstname');
+            $lastname = $request->get('lastname');
+            $phone = $request->get('phone');
+            $address = $request->get('address');
 
-            $pwd = $user->getPassword();
-            $user->setPassword($pwd);
+            $em = $this->getDoctrine()->getManager();
+            $user = $em->getRepository('PhenomWafeeeBundle:User')->find($this->getUser()->getId());
 
+            $user->setFirstname($firstname);
+            $user->setLastname($lastname);
+            $user->setPhone($phone);
+            $user->setAddress($address);
 
+            $em->persist($user);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('user'));
+            return $this->redirect($this->generateUrl('user_profile', array('username' => $user->getUsername() )));
         }
 
-        return array(
-            'user'      => $user,
-            'edit_form'   => $editForm->createView(),
+        return $this->render('PhenomWafeeeBundle:User:editUserProfile.html.twig',
+            array(
+                'user'      => $user,
+            )
         );
     }
+
     /**
      * Deletes a User entity.
      *

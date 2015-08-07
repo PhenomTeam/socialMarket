@@ -311,4 +311,15 @@ class CategoryController extends Controller
             )
         );
     }
+
+    /**
+     *
+     * @Route("/cate/catee", name="category_page")
+     *
+     */
+    public function categoryPageAction()
+    {
+        return $this->render('PhenomWafeeeBundle:Category:category.page.html.twig');
+    }
+
 }
